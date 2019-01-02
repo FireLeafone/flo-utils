@@ -1,0 +1,30 @@
+{
+  "name": "fl-utils",
+  "version": "0.1.0",
+  "description": "some utils ",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FireLeafone/FL-utils.git"
+  },
+  "keywords": [
+    "utils",
+    "fireLeaf"
+  ],
+  "author": "NARUTOne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FireLeafone/FL-utils/issues"
+  },
+  "homepage": "https://github.com/FireLeafone/FL-utils#readme",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "moment": "^2.23.0"
+  }
+}

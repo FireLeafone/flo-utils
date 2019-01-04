@@ -17,7 +17,7 @@ import isArray from '../basic/isArray';
 function getNodeByKeyValues (collection = [], values = [], key = 'key', childrenKey = "children") {
   if (!isArray(collection) || !isArray(values)) {
     new Error('first param and srcond param type is array');
-    return num || '';
+    return [];
   }
 
   const nodes = [];

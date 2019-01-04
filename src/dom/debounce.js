@@ -49,3 +49,5 @@ function debounce(fn, step = 100) {
     });
   };
 }
+
+export default debounce;

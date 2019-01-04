@@ -23,6 +23,6 @@ function deepCopy (o) {
   } else {
     return o;
   }
-};
+}
 
 export default deepCopy;

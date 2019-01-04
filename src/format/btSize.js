@@ -22,6 +22,6 @@ function btSize(size) {
     return size;
   }
   return 0;
-};
+}
 
 export default btSize;

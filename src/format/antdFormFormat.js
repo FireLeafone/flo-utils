@@ -22,4 +22,4 @@ function antFormFormat (record = {}) {
   return obj;
 }
 
-export default antFormFormat
+export default antFormFormat;

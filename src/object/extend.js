@@ -9,7 +9,7 @@
 import isObject from '../basic/isObject';
 
 function extend(obj1, obj2) {
-  if (!isObject(obj1) || !isObject(obj2s)) {
+  if (!isObject(obj1) || !isObject(obj2)) {
     new Error('type is object');
     return false;
   }
@@ -18,6 +18,6 @@ function extend(obj1, obj2) {
     obj1[key]=obj2[key];
   }
   return obj1;
-};
+}
 
 export default extend;

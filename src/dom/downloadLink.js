@@ -6,7 +6,7 @@
  * @description 模拟下载
  */
 
-const URL_REG = /((((http|ftp|https|file):\/\/)?)([\w\-]+\.)+[\w\-]+(\/[\w\u4e00-\u9fa5\-\.\/?\@\%\!\&=\+\~\:\#\;\,]*)?)/;
+const URL_REG = /^((https?|ftp|file):\/\/)?([\da-z\\.-]+)\.([a-z\\.]{2,6})([\\/\w \\.-]*)*\/?$/;
 
 export const downloadLink = (url = '', filename = 'file') => {
   if (!URL_REG.test(url)) {

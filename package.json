@@ -1,5 +1,5 @@
 {
-  "name": "FL-utils",
+  "name": "flo-utils",
   "version": "0.1.0",
   "description": "some utils ",
   "main": "lib/index.js",

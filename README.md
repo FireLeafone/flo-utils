@@ -28,6 +28,16 @@ Using npm:
 npm install flo-utils --save
 ```
 
+## Use
+
+```js
+import {...} from 'flo-utils'
+
+// 按需
+
+import isNull from 'flo-utils/lib/basic/isNull'
+```
+
 ## 类别
 
 - [Ajax](./docs/ajax.md)

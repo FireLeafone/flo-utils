@@ -16,7 +16,7 @@
 
 import moment from 'moment';
 
-export const formatDate = (date, rule = 'YYYY-MM-DD') => {
+const formatDate = (date, rule = 'YYYY-MM-DD') => {
   if (!date) return;
   if (typeof date === 'string') {
     date = date.trim();
@@ -24,3 +24,5 @@ export const formatDate = (date, rule = 'YYYY-MM-DD') => {
   var text = moment(date).format(rule);
   return text === 'Invalid date' ? date : text;
 };
+
+export default formatDate;

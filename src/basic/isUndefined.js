@@ -14,7 +14,7 @@
  */
 
 function isUndefined(value) {
-  return value === null;
+  return value === undefined;
 }
 
 export default isUndefined;

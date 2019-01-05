@@ -1,5 +1,5 @@
 {
-  "name": "fl-utils",
+  "name": "FL-utils",
   "version": "0.1.0",
   "description": "some utils ",
   "main": "lib/index.js",
@@ -42,13 +42,8 @@
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^5.11.1",
     "eslint-plugin-jest": "^22.1.2",
-    "jest": "^23.6.0"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ]
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.13.1"
   },
   "engines": {
     "node": ">= 6.0.0",

@@ -3,7 +3,13 @@
  * @param {*} obj
  * @returns
  */
+import isObject from '../basic/isObject';
+
 function emptyObj(obj) {
+  if (!isObject(obj)) {
+    new Error('type is object');
+    return false;
+  }
   for (var prop in obj){
     if(obj.hasOwnProperty(prop))
     {

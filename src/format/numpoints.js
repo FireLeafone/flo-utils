@@ -33,7 +33,7 @@ function numPoints (num, precision = 2) {
     if (decimal.length < precision) {
       decimal += add0;
     }
-    return revInter + decimal;
+    return revInter + '.' + decimal;
   }
   return revInter;
 }

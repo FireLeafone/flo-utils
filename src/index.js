@@ -56,6 +56,7 @@ export {default as isUndefined} from './basic/isUndefined';
 export {default as maxArrNum} from './array/maxArrNum';
 export {default as minArrNum} from './array/minArrNum';
 export {default as uniqueArray} from './array/uniqueArray';
+export {default as isRepeatArray} from './array/isRepeatArray';
 
 /**
  * collection
@@ -66,7 +67,6 @@ export {default as arrayTreeCallBack} from './collection/arrayTreeCallBack';
 export {default as deepCopy} from './collection/deepCopy';
 export {default as filter} from './collection/filter';
 export {default as getNodeByKeyValues} from './collection/getNodeByKeyValues';
-export {default as isRepeatArray} from './collection/isRepeatArray';
 export {default as sortTree} from './collection/sortTree';
 
 /**
@@ -91,5 +91,4 @@ export {default as numpoints} from './format/numpoints';
  */
 
 export {default as emptyObj} from './object/emptyObj';
-export {default as extend} from './object/extend';
 export {default as isEquivalentObj} from './object/isEquivalentObj';

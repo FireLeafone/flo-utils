@@ -14,8 +14,7 @@
  */
 
 function isObject(value) {
-  var type = typeof value;
-  return value != null && (type == 'object' || type == 'function');
+  return Object.prototype.toString.call(value) === '[object Object]';
 }
 
 export default isObject;

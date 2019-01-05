@@ -1,6 +1,6 @@
 /**
  *
- * @name btSize 容量置换
+ * @name btSize 容量置换 为 bt
  * @param {*} size
  * @returns
  */

@@ -5,7 +5,7 @@
 /**
  * @name filter, 数据过滤
  * @param {*} collection
- * @param {function} func
+ * @param {function} func return boolean
  */
 
 import isArray from '../basic/isArray';
@@ -17,10 +17,10 @@ function filter (collection, func) {
     return new Error('second param is object or array !');
   }
   if (isArray(collection)) {
-    result = collection.filter(item => func(item));
+    result = collection.filter((item, i) => func(item, i));
   } else if (isObject(collection)) {
     const keysArr = Object.keys(collection);
-    const keysFilter = keysArr.filter(key => func(collection[key]));
+    const keysFilter = keysArr.filter(key => func(collection[key], key));
 
     result = {};
     for (const key of keysFilter) {

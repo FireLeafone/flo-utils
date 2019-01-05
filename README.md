@@ -25,7 +25,7 @@
 Using npm:
 
 ```npm
-npm install FL-utils --save
+npm install flo-utils --save
 ```
 
 ## 类别

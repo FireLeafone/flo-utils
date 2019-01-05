@@ -10,8 +10,8 @@
     "test": "npm run lint && npm run unit",
     "unit": "jest",
     "lint": "eslint --ext .js src",
-    "build": "babel src -d lib",
-    "release": "npm run test && npm run build && npm publish && git push",
+    "build": "babel src -d lib --ignore __tests__",
+    "release": "npm run test && npm run build && npm publish",
     "version": "npm version patch"
   },
   "repository": {
@@ -22,7 +22,7 @@
     "utils",
     "fireLeaf"
   ],
-  "author": "NARUTOne",
+  "author": "narutone",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/FireLeafone/FL-utils/issues"

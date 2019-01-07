@@ -7,7 +7,7 @@
 
 import isObject from '../basic/isObject';
 
-function antFormFormat (record = {}) {
+function antdFormFormat (record = {}) {
   if (!isObject(record)) {
     new Error ('param is object type');
     return;
@@ -22,4 +22,4 @@ function antFormFormat (record = {}) {
   return obj;
 }
 
-export default antFormFormat;
+export default antdFormFormat;

@@ -11,9 +11,10 @@
     "unit": "jest",
     "lint": "eslint --ext .js src",
     "build": "babel src -d lib --ignore __tests__",
-    "release": "npm run test && npm run build && npm publish",
-    "repair": "npm run version && npm run release",
-    "version": "npm version patch"
+    "ready": "npm run test && npm run build",
+    "version": "git add -A && git commit -m 'version' && npm version patch",
+    "release": "npm publish",
+    "repair": "npm run ready && npm run version && npm run release"
   },
   "repository": {
     "type": "git",

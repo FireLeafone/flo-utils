@@ -8,7 +8,7 @@
 
 const URL_REG = /^((https?|ftp|file):\/\/)?([\da-z\\.-]+)\.([a-z\\.]{2,6})([\\/\w \\.-]*)*\/?$/;
 
-export const downloadLink = (url = '', filename = 'file') => {
+const downloadLink = (url = '', filename = 'file') => {
   if (!URL_REG.test(url)) {
     new Error('url is error');
     return;
@@ -20,3 +20,5 @@ export const downloadLink = (url = '', filename = 'file') => {
   a.click();
   a.remove();
 };
+
+export default downloadLink;

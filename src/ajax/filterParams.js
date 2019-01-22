@@ -27,6 +27,9 @@ function filterParams (params) {
         return false;
       }
     }
+    else if (typeof(item) === 'boolean') {
+      return true;
+    }
     else if (!item && item !== 0) {
       return false;
     }

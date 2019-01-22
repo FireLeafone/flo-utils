@@ -1,6 +1,6 @@
 {
   "name": "flo-utils",
-  "version": "0.1.32",
+  "version": "0.1.3",
   "description": "some utils ",
   "main": "lib/index.js",
   "files": [
@@ -14,7 +14,7 @@
     "ready": "npm run test && npm run build",
     "version": "git add -A && git commit -m 'version' && npm version patch",
     "release": "npm publish",
-    "repair": "npm run ready && npm run version && npm run release"
+    "repair": "npm run ready && npm run release"
   },
   "repository": {
     "type": "git",

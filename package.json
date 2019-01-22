@@ -12,6 +12,7 @@
     "lint": "eslint --ext .js src",
     "build": "babel src -d lib --ignore __tests__",
     "release": "npm run test && npm run build && npm publish",
+    "repair": "npm run version && npm run release",
     "version": "npm version patch"
   },
   "repository": {

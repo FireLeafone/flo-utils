@@ -1,6 +1,6 @@
 {
   "name": "flo-utils",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "some utils ",
   "main": "lib/index.js",
   "files": [
@@ -12,9 +12,9 @@
     "lint": "eslint --ext .js src",
     "build": "babel src -d lib --ignore __tests__",
     "ready": "npm run test && npm run build",
-    "version": "git add -A && git commit -m 'version' && npm version patch",
+    "git": "git add -A && git commit -m 'version'",
     "release": "npm publish",
-    "repair": "npm run ready && npm run release"
+    "repair": "npm run ready && npm run release && npm run git"
   },
   "repository": {
     "type": "git",

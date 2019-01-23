@@ -3,7 +3,7 @@
  */
 
 /**
- * @name filter, 数据过滤
+ * @name filter, 扁平数据过滤
  * @param {*} collection
  * @param {function} func return boolean
  */

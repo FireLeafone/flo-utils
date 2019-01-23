@@ -5,7 +5,12 @@
  * @param {string} [pid="pid"]
  * @param {string} [children="children"]
  */
+import isArray from '../basic/isArray';
+ 
 function arrayToTree(arr, id="id", pid="pid", children="children") {
+  if (!isArray(arr)) {
+    return new Error('data params is array type');
+  }
   const data = [].concat(arr);
   const result = [];
   const hash = {};

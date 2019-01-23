@@ -1,18 +1,26 @@
-/**
+/** 
+ * 
  * @param {*} value 检查参数
  * @returns {boolean} 返回检查结果；`true`，则`value`是数组，否则不是
  * @example
  * 
  * isArray([1, 2, 3]);
- * // => true
+ *  => true
  * 
  * isArray('abc');
- * // => false
+ *  => false
  * 
  * isArray(document.body.children);
- * // => false
+ *  => false
  */
 
-var isArray = Array.isArray;
+function isArray (arr) {
+  if (!Array.isArray) {
+    Array.isArray = function(arg) {
+      return Object.prototype.toString.call(arg) === '[object Array]';
+    };
+  }
+  return Array.isArray(arr);
+}
 
 export default isArray;

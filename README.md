@@ -43,6 +43,7 @@ import isNull from 'flo-utils/lib/basic/isNull'
 - [Ajax](./docs/ajax.md)
 - [Array](./docs/array.md)
 - [Object](./docs/object.md)
+- [String](./docs/string.md)
 - [Basic](./docs/basic.md)
 - [Collection](./docs/collection.md)
 - [Dom](./docs/dom.md)

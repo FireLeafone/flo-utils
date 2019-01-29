@@ -1,5 +1,5 @@
 /**
- * @name filterTree, 树状结构数据过滤
+ * @name filterTree, 树状结构数据过滤集合
  * @param {*} data
  * @param {*} id
  * @param {string} [key="id"]

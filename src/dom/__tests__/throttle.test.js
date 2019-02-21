@@ -6,7 +6,7 @@ describe('High frequency stabilization', () => {
       return new Promise((resolve) => {
         resolve(params);
       });
-    }, 500);
+    }, 300);
     function ajaxFunc(params) {
       return new Promise((resolve) => {
         throttleFunc(params).then(res => {
@@ -24,7 +24,7 @@ describe('High frequency stabilization', () => {
           return;
         }
         ajaxFunc(n).then(res => {
-          expect(res).toBe(4);
+          expect(res).toBe(0); // 只执行第一次
           done();
         });
         n++;

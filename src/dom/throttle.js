@@ -74,14 +74,14 @@ function throttle (func, wait = 300) {
   return function () {
     var context = this;
     var args = arguments;
-    if (!timeout) {
-      return new Promise(resolve => {
+    return new Promise((resolve) => {
+      if (!timeout) {
         timeout = setTimeout(() => {
           timeout = null;
           resolve(func.apply(context, args));
         }, wait);
-      });
-    }
+      }
+    });
   };
 }
 

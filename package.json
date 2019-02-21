@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js src",
     "build": "babel src -d lib --ignore __tests__",
     "ready": "npm run test && npm run build",
-    "git": "git add -A && git commit -m 'version'",
+    "git": "git add -A && git commit -m 'release version' && git push origin master",
     "release": "npm publish",
     "repair": "npm run ready && npm run release && npm run git"
   },

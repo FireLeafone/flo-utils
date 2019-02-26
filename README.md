@@ -33,8 +33,7 @@ npm install flo-utils --save
 ```js
 import {...} from 'flo-utils'
 
-// 按需
-
+// 按需加载
 import isNull from 'flo-utils/lib/basic/isNull'
 ```
 

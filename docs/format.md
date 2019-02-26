@@ -20,6 +20,24 @@ antdFormFormat({name: 'ad', age: 12});
 */
 ```
 
+## unBindAntdForm
+
+> antd下的form组件，数据格式化
+
+```js
+unBindAntdForm({
+  name: {
+    value: 'ad'
+  },
+  age: {
+    value: 12
+  }
+});
+/*
+{name: 'ad', age: 12}
+*/
+```
+
 ## btSize
 
 > 高容量置换 为 bt
@@ -49,9 +67,9 @@ formatDate('20190101');
 
 > 数字千分符，支持小数
 
-@param {*} num
-@param {number} [precision=2]
-@return {string}
+* @param {*} num
+* @param {number} [precision=2]
+* @return {string}
 
 ```js
 numPoints(1001);
@@ -59,4 +77,28 @@ numPoints(1001);
 
 numPoints('sd');
 // => 'sd'
+```
+
+## rgbToHex
+
+> 颜色格式转换，rgb 转 hex
+
+* @name rgbToHex
+* @param [string] rgb(r, g, b)
+* @return 16进制颜色 #xxxxxx
+
+```js
+rgbToHex('rgb(255, 182, 193)'); // #FFB6C1
+```
+
+## hexToRgb
+
+> 颜色格式转换，hex 转 rgb
+
+* @name hexToRgb
+* @param [string] #xxx || #xxxxxx
+* @return rgb(r, g, b)
+
+```js
+hexToRgb('#FFB6C1'); // rgb(255, 182, 193)
 ```

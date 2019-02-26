@@ -1,5 +1,4 @@
 /**
- * 
  * @name randomId 随记ID
  * @returns 生成10-12位不等的字符串
  */

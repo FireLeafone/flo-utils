@@ -2,12 +2,13 @@
 
 > pm log 🚀
 
-## 0.1.6 未打包
+## 0.1.6
 
-`2019-02-26`
+`2019-03-25`
 
 - ➕ `unBindAntdForm`，解绑FormData
 - ➕ `hexToRgb` && `rgbToHex` 颜色转换
+- `downloadLink`优化 url
 
 ## 0.1.5
 

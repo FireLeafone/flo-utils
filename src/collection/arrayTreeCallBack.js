@@ -10,7 +10,7 @@ function arrayTreeCallBack (treeNodes, Fn, options) {
   if (!isArray(treeNodes)) {
     return new Error('data params is array type');
   }
-  if (!treeNodes.length) return;
+  if (!treeNodes.length) return [];
   
   options = options || {};
   options.childrenKeyName = options.childrenKeyName || 'children';

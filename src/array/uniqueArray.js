@@ -13,6 +13,7 @@ function uniqueArray(arr, key) {
       return _.uniq(arr);
     }
   }
+  return [];
 }
 
 export default uniqueArray;

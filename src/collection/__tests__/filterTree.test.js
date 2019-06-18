@@ -1,4 +1,4 @@
-import treeFilter from '../treeFilter';
+import filterTree from '../filterTree';
 
 describe('the collection filter', () => {
   const obj = [
@@ -20,7 +20,7 @@ describe('the collection filter', () => {
     }
   ];
   it('object filter', () => {
-    expect(treeFilter(obj, 12, 'age')).toEqual([
+    expect(filterTree(obj, 12, 'age')).toEqual([
       {
         age: 50,
         children: [

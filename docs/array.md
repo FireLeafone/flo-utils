@@ -4,7 +4,7 @@
 
 ## isRepeatArray
 
-> 数组是否存在重复元素
+> 数组是否存在重复元素, [深度判重 _.isEqual](https://www.lodashjs.com/docs/4.17.5.html#isEqual)
 
 ```js
 isRepeatArray([1, 1, 2]); // => true

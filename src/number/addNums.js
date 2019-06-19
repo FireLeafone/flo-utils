@@ -1,7 +1,7 @@
 /**
- * 精确加法
- * @param num1
- * @param num2
+ * 精确加法, 预防相加结果精度问题
+ * @param num1 {number, string}
+ * @param num2 {number, string}
  */
 export default function addNums (num1, num2) {
   const num1Digits = (num1.toString().split('.')[1] || '').length;

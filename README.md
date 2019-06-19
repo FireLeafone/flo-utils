@@ -31,9 +31,8 @@ npm install flo-utils --save
 ## Use
 
 ```js
-import {...} from 'flo-utils'
-
 // 按需加载
+import {...} from 'flo-utils'
 import isNull from 'flo-utils/lib/basic/isNull'
 ```
 
@@ -43,6 +42,7 @@ import isNull from 'flo-utils/lib/basic/isNull'
 - [Array](./docs/array.md)
 - [Object](./docs/object.md)
 - [String](./docs/string.md)
+- [Number](./docs/number.md)
 - [Basic](./docs/basic.md)
 - [Collection](./docs/collection.md)
 - [Dom](./docs/dom.md)

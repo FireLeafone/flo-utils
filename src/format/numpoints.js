@@ -1,7 +1,7 @@
 /**
  * @name numPoints 数字千分符，支持小数
  * @param {*} num
- * @param {number} [precision=2]
+ * @param {number} [precision=0]
  * @return {string}
  * @example
  * 
@@ -15,7 +15,7 @@
 import _ from 'lodash';
 import beNaN from '../basic/beNaN';
 
-function numPoints (num, precision = 2) {
+function numPoints (num, precision = 0) {
   const toNum = _.toNumber(num);
   if (!_.isNumber(precision)) {
     new Error('srcond param type is number');

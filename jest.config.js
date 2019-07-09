@@ -6,6 +6,5 @@ module.exports = {
     "!src/**/__test__/*.js",
   ],
   moduleFileExtensions: ["js"],
-  testFileExtensions: ["js"],
-  testPathIgnorePatterns: ['/node_modules/'],
+  testPathIgnorePatterns: ['/node_modules/']
 };

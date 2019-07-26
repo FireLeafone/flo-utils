@@ -3,10 +3,13 @@
  * @param {any} paramsString 
  * @returns 
  */
+
+export const DEFAULT_VALUE = {};
+
 function paramToObj (paramsString) {
   const search = paramsString;
   if (!search) {
-    return {};
+    return DEFAULT_VALUE;
   }
   return JSON.parse('{"' + decodeURIComponent(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
 }

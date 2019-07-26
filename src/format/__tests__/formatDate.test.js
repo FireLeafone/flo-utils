@@ -22,4 +22,7 @@ describe('format date', () => {
     const result = `${year}/${addLength(month)}/${addLength(day)}`;
     expect(formatDate(date, 'YYYY/MM/DD')).toBe(result);
   });
+  it('empty param', () => {
+    expect(formatDate()).toBe('');
+  });
 });

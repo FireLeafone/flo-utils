@@ -1,6 +1,6 @@
 {
   "name": "flo-utils",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "some utils ",
   "main": "lib/index.js",
   "files": [
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "npm run lint && npm run unit",
     "unit": "jest --no-cache",
-    "lint": "eslint --ext .js src",
+    "lint": "eslint --fix --ext .js src",
     "build": "babel src -d lib --ignore __tests__",
     "ready": "npm run test && npm run build",
     "git": "git add -A && git commit -m 'release pro version' && git push origin master",
@@ -57,7 +57,6 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/runtime": "^7.5.2",
-    "@babel/runtime-corejs2": "^7.5.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",

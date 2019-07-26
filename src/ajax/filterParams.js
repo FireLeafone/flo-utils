@@ -9,6 +9,8 @@ import isObject from '../basic/isObject';
 import isArray from '../basic/isArray';
 import emptyObj from '../object/emptyObj';
 
+export const DEFAULT_VALUE = {};
+
 function filterParams (params) {
   const newParams = params ? filter(params, item => {
     if (typeof item === 'string') {
@@ -34,7 +36,7 @@ function filterParams (params) {
       return false;
     }
     return true;
-  }) : {};
+  }) : DEFAULT_VALUE;
 
   return newParams;
 }

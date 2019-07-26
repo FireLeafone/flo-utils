@@ -18,12 +18,7 @@ module.exports = function (api) {
   ];
 
   const plugins = [
-    [
-      "@babel/plugin-transform-runtime",
-      {
-        "corejs": 2
-      }
-    ],
+    "@babel/plugin-transform-runtime",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-import-meta",
     "@babel/plugin-proposal-class-properties",

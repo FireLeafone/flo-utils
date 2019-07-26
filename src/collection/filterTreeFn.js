@@ -7,11 +7,13 @@
  */
 import isArray from '../basic/isArray';
 
+export const DEFAULT_VALUE = [];
+
 function filterTreeFn (data, fn, childrenKey = 'children') {
   if (!isArray(data)) {
-    return new Error('data params is array type');
+    return DEFAULT_VALUE;
   }
-  if (!data.length) return [];
+  if (!data.length) return DEFAULT_VALUE;
   var newData = data.filter(fn);
   newData.forEach(x => x[childrenKey] && (x[childrenKey] = filterTreeFn(x[childrenKey], fn)));
 

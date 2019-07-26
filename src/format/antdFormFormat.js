@@ -7,10 +7,12 @@
 
 import isObject from '../basic/isObject';
 
+export const DEFAULT_VALUE = {};
+
 function antdFormFormat (record = {}) {
   if (!isObject(record)) {
     new Error ('param is object type');
-    return;
+    return DEFAULT_VALUE;
   }
   const keys = Object.keys(record);
   const obj = {};

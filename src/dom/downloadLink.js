@@ -7,6 +7,7 @@
  */
 
 const downloadLink = (url = '', filename = 'file') => {
+  if (!url) return false;
   const a = document.createElement('a');
   a.href = url;
   a.download = filename;

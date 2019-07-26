@@ -7,4 +7,7 @@ describe('check object empty', () => {
   it('no empty object', () => {
     expect(emptyObj({prop: 1})).not.toBeTruthy();
   });
+  it('no object', () => {
+    expect(emptyObj("")).not.toBeTruthy();
+  });
 });

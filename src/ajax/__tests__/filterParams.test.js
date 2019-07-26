@@ -1,4 +1,4 @@
-import filterParams from '../filterParams';
+import filterParams, {DEFAULT_VALUE} from '../filterParams';
 
 describe('filter empty params', () => {
   it('simple params filter', () => {
@@ -17,5 +17,8 @@ describe('filter empty params', () => {
       obj: {age: 10},
       arr: [1]
     });
+  });
+  it('empty param', () => {
+    expect(filterParams()).toBe(DEFAULT_VALUE);
   });
 });

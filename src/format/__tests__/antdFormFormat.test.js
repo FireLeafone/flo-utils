@@ -1,4 +1,4 @@
-import antdFormFormat from '../antdFormFormat';
+import antdFormFormat, {DEFAULT_VALUE} from '../antdFormFormat';
 
 describe('antd form format', () => {
   it('object to value', () => {
@@ -10,5 +10,8 @@ describe('antd form format', () => {
         value: 12
       }
     });
+  });
+  it('empty param', () => {
+    expect(antdFormFormat('')).toBe(DEFAULT_VALUE);
   });
 });

@@ -11,8 +11,10 @@ import isArray from '../basic/isArray';
 import isObject from '../basic/isObject';
 import isNumber from '../basic/isNumber';
 
+export const DEFAULT_VALUE = [];
+
 const sortTree = (tree = [], sort = 'asc', sortKey = 'sort', childrenKey = 'children') => {
-  if (!isArray(tree) || !tree.length) return [];
+  if (!isArray(tree) || !tree.length) return DEFAULT_VALUE;
 
   if (tree.length < 2) {
     if (tree[0][childrenKey] && tree[0][childrenKey].length) {

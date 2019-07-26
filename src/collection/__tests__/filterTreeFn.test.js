@@ -1,4 +1,4 @@
-import filterTreeFn from '../filterTreeFn';
+import filterTreeFn, {DEFAULT_VALUE} from '../filterTreeFn';
 
 describe('the collection filter', () => {
   const obj = [
@@ -19,6 +19,10 @@ describe('the collection filter', () => {
       ]
     }
   ];
+  it('empty param', () => {
+    const expected = DEFAULT_VALUE;
+    expect(filterTreeFn({}, (item) => item)).toBe(expected);
+  });
   it('object filter', () => {
     expect(filterTreeFn(obj, (item) => {
       return item.age > 18;

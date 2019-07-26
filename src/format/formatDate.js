@@ -17,7 +17,7 @@
 import moment from 'moment';
 
 const formatDate = (date, rule = 'YYYY-MM-DD') => {
-  if (!date) return;
+  if (!date) return "";
   if (typeof date === 'string') {
     date = date.trim();
   }

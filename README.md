@@ -18,6 +18,8 @@
 [travis-url]: https://travis-ci.org/FireLeafone/FL-utils
 [travis-img]: https://travis-ci.org/FireLeafone/FL-utils.svg?branch=master
 
+![flo-utils-logo](./logo.png)
+
 常用库[lodashJS](https://www.lodashjs.com/)
 
 ## Installing

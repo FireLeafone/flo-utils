@@ -203,7 +203,7 @@ sortTree(objA, 'desc', 'age');
 */
 ```
 
-## treeFilter
+## filterTree
 
 > 树形数据过滤
 
@@ -226,7 +226,50 @@ const obj = [
       ]
     }
   ];
-treeFilter(obj, 12, 'age');
+filterTree(obj, 12, 'age');
+/*
+[
+  {
+    age: 50,
+    children: [
+      {
+        age: 30,
+        children: [
+          {
+            age: 8
+          }
+        ]
+      }
+    ]
+  }
+]
+*/
+```
+
+## filterTreeFn
+
+> 树形数据过滤
+
+```js
+const obj = [
+    {
+      age: 50,
+      children: [
+        {
+          age: 30,
+          children: [
+            {
+              age: 12
+            },
+            {
+              age: 8
+            }
+          ]
+        }
+      ]
+    }
+  ];
+filterTreeFn(obj, (item) => item.age == 12);
 /*
 [
   {

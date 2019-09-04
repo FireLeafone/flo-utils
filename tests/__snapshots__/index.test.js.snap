@@ -41,5 +41,6 @@ Array [
   "addNums",
   "randomId",
   "randomColor",
+  "trim",
 ]
 `;

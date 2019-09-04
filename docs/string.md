@@ -7,7 +7,7 @@
 > 随记Id, 生成10-12位不等的字符串
 
 ```js
-randomId(); // 随记Id
+randomId(); // 随机Id
 ```
 
 ## randomColor
@@ -20,5 +20,17 @@ randomId(); // 随记Id
 * @param {number} [alpha=1] 透明度
 
 ```js
-randomColor("rgba", 0.8); // 随记color
+randomColor("rgba", 0.8); // 随机color
+```
+
+## trim
+
+> 字符串去空（制表符和换行符）
+
+* @name trim
+* @param {string} [str=''] 目标字符串
+* @param {string} [position="both"] 去除位置 `left|right|both|center|all`
+
+```js
+trim(" s t r "); //s t r
 ```

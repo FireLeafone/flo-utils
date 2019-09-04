@@ -36,6 +36,8 @@ npm install flo-utils --save
 // 按需加载
 import {...} from 'flo-utils'
 import isNull from 'flo-utils/lib/basic/isNull'
+// script 引入
+<script src="flo-utils/min/floUtils.js"></scritp>
 ```
 
 ## 类别

@@ -11,7 +11,7 @@ function emptyObj(obj) {
     return false;
   }
   for (var prop in obj){
-    if(obj.hasOwnProperty(prop))
+    if(Object.prototype.hasOwnProperty.call(obj, prop))
     {
       return false;
     }

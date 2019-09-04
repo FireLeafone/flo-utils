@@ -111,3 +111,4 @@ export {default as addNums} from './number/addNums';
 
 export {default as randomId} from './string/randomId';
 export {default as randomColor} from './string/randomColor';
+export {default as trim} from './string/trim';

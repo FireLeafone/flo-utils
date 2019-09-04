@@ -1,6 +1,7 @@
 import sortTree, {DEFAULT_VALUE} from '../sortTree';
 
 const nums = [1, 2, 5, 3];
+const strs = ["a", "b", "d", "c"];
 const objA = [
   {
     age: 10
@@ -12,6 +13,8 @@ const objA = [
         age: 8
       }, {
         age: 9
+      }, {
+        age: 0
       }
     ]
   }
@@ -24,6 +27,9 @@ describe('tree data sort', () => {
   it('sort asc', () => {
     expect(sortTree(nums, 'asc')).toEqual([1, 2, 3, 5]);
   });
+  it('sort strng asc', () => {
+    expect(sortTree(strs, 'asc')).toEqual(["a", "b", "d", "c"]);
+  });
   it('sort object desc', () => {
     expect(sortTree(objA, 'desc', 'age')).toEqual([
       {
@@ -33,6 +39,8 @@ describe('tree data sort', () => {
             age: 9
           }, {
             age: 8
+          }, {
+            age: 0
           }
         ]
       },

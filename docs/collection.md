@@ -157,7 +157,7 @@ getNodeByKeyValues([{name: 'ass'}, {name: 'a', children: [{name: 'ass', type: 'c
 
 ## sortTree
 
-> 树形结构排序
+> 树形结构排序, 只针对 值为数字的排序
 
 * @param   {array}     tree
 * @param   {String}    sort

@@ -879,8 +879,10 @@ BRDA:33,9,0,0
 BRDA:33,9,1,1
 BRDA:37,10,0,1
 BRDA:37,10,1,1
-BRF:22
-BRH:15
+BRDA:40,11,0,1
+BRDA:40,11,1,0
+BRF:24
+BRH:16
 end_of_record
 TN:
 SF:D:\wz\web之路\fire-leaf-one\FL-utils\src\format\rgbToHex.js

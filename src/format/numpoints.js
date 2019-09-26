@@ -1,7 +1,7 @@
 /**
  * @name numPoints 数字千分符，支持小数
  * @param {*} num
- * @param {number} [precision=0]
+ * @param {number} [precision], 不传则返回所以小数部分
  * @return {string}
  * @example
  * 
@@ -15,15 +15,15 @@
 import _ from 'lodash';
 import beNaN from '../basic/beNaN';
 
-function numPoints (num, precision = 0) {
+function numPoints (num, precision) {
   const toNum = _.toNumber(num);
-  if (!_.isNumber(precision)) {
+  if (precision && !_.isNumber(precision)) {
     new Error('srcond param type is number');
     return num || '';
   }
   if (beNaN(toNum)) return num || '';
 
-  var str = toNum.toFixed(precision) + '';
+  var str = precision ? toNum.toFixed(precision) + '' : toNum + "";
   var decimal = str.split('.')[1] || ''; // 小数部分
   var inter = str.split('.')[0] || ''; // 整数部分
   var revInter = inter.replace(/(?=(?!\b)(\d{3})+$)/g, ',');
@@ -34,8 +34,12 @@ function numPoints (num, precision = 0) {
       decimal += add0;
     }
     return revInter + '.' + decimal;
+  } else if (precision == 0) {
+    return revInter;
+  } else {
+    return revInter + '.' + decimal;
   }
-  return revInter;
+  
 }
 
 export default numPoints;

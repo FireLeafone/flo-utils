@@ -68,12 +68,15 @@ formatDate('20190101');
 > 数字千分符，支持小数
 
 * @param {*} num
-* @param {number} [precision=0]
+* @param {number} [precision=0]， 不传则返回所以小数部分
 * @return {string}
 
 ```js
 numPoints(1001);
 // => '1,001'
+
+numPoints(1001.2, 2);
+// => '1,001.20'
 
 numPoints('sd');
 // => 'sd'

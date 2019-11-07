@@ -70,6 +70,7 @@ export {default as getNodeByKeyValues} from './collection/getNodeByKeyValues';
 export {default as sortTree} from './collection/sortTree';
 export {default as filterTree} from './collection/filterTree';
 export {default as filterTreeFn} from './collection/filterTreeFn';
+export {default as getValueByPath} from './collection/getValueByPath';
 
 /**
  * dom

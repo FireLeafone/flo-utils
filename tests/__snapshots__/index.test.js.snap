@@ -25,6 +25,7 @@ Array [
   "sortTree",
   "filterTree",
   "filterTreeFn",
+  "getValueByPath",
   "debounce",
   "downloadLink",
   "drawLineArrow",

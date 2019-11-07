@@ -2,6 +2,15 @@
 
 > pm log 🚀
 
+## 0.2.3
+
+`2019-11-07`
+
+- ➕ `getValueByPath` 通过path 获取值
+- `hexToRgb` 支持传入透明度，默认0.8
+- `arrayTreeCallBack` 支持 前序DLR、后续LRD遍历
+- `addNums` 支持单位保存（同单位相加）
+
 ## 0.2.2
 
 `2019-09-26`

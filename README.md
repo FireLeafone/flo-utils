@@ -40,7 +40,7 @@ import isNull from 'flo-utils/lib/basic/isNull'
 <script src="flo-utils/min/floUtils.js"></scritp>
 ```
 
-## 类别
+## 类别区分
 
 - [Ajax](./docs/ajax.md)
 - [Array](./docs/array.md)

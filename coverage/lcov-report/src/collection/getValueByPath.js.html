@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/basic/isLength.js</title>
+    <title>Code coverage report for src/collection/getValueByPath.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="..\..\prettify.css" />
     <link rel="stylesheet" href="..\..\base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="..\..\index.html">All files</a> / <a href="index.html">src/basic</a> isLength.js
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/collection</a> getValueByPath.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>11/11</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>17/17</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>10/10</span>
       </div>
     </div>
     <p class="quiet">
@@ -70,7 +70,13 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -79,45 +85,57 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * @param {*} value 检查参数
- * @returns {boolean} 返回检查结果；`true`，则`value`是length，否则不是
- * @example
- * 
- * isLength(3);
- * // =&gt; true
- * 
- * isLength(Number.MIN_VALUE);
- * // =&gt; false
- * 
- * isLength('3');
- * // =&gt; false
+ * @name getValueByPath
+ * @param {any} obj
+ * @param {any} props  a.b.c.d
+ * @param {string} [defaultValue=""]
+ * @returns 
+ * @description 通过路径获取数据
  */
+function getValueByPath (obj, props, defaultValue = "-") {
+  if (typeof props === "string") {
+    props = props.split(".").filter(d =&gt; d);
+  }
 &nbsp;
-// Number.MAX_SAFE_INTEGER
-var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER;
+  if (typeof obj === "undefined" || (!obj &amp;&amp; typeof obj !== "undefined" &amp;&amp; obj !== 0)) {
+    return defaultValue;
+  }
+  if (!props || props.length === 0) {
+    return obj;
+  }
 &nbsp;
-function isLength(value) {
-  return typeof value == 'number' &amp;&amp;
-    value &gt; -1 &amp;&amp; value % 1 == 0 &amp;&amp; value &lt;= MAX_SAFE_INTEGER;
+  var prop = props.shift();
+&nbsp;
+  if (prop &amp;&amp; Object.prototype.hasOwnProperty.call(obj, prop)) {
+    return getValueByPath(obj[prop], props, defaultValue);
+  }
+&nbsp;
+  return defaultValue;
 }
 &nbsp;
-export default isLength;
+export default getValueByPath;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

@@ -69,6 +69,13 @@ arrayToTree(drawArr, 'id', 'pid');
 * @param {any} Fn
 * @param {any} options [children]
 
+```json
+{
+    "childrenKeyName": "children",
+    "traversal": "DLR" // LRD 后序遍历；DLR 前序遍历
+}
+```
+
 ```js
 const tree = [{
   id: '0',
@@ -287,4 +294,39 @@ filterTreeFn(obj, (item) => item.age == 12);
   }
 ]
 */
+```
+
+## getValueByPath
+
+> 通过路径获取数据
+
+* @param {any} obj
+* @param {any} props  a.b.c.d
+* @param {string} [defaultValue=""]
+
+```js
+const tree = [{
+    id: '0',
+    name: 'parent',
+    children: [
+      {
+        id: '01',
+        pid: '0',
+        name: 'child1'
+      },
+      {
+        id: '02',
+        pid: '0',
+        name: 'child2',
+        children: [
+          {
+            id: '021',
+            pid: '02',
+            name: 'child2-child'
+          }
+        ]
+      }
+    ]
+  }];
+getValueByPath("0.children.1.children.name"); // child2-child
 ```

@@ -100,8 +100,9 @@ rgbToHex('rgb(255, 182, 193)'); // #FFB6C1
 
 * @name hexToRgb
 * @param [string] #xxx || #xxxxxx
+* @param [number] a, 透明度
 * @return rgb(r, g, b)
 
 ```js
-hexToRgb('#FFB6C1'); // rgb(255, 182, 193)
+hexToRgb('#FFB6C1'); // rgb(255, 182, 193, 0.8)
 ```

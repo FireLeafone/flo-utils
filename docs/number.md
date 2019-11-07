@@ -4,7 +4,7 @@
 
 ## addNums
 
-> 浮点数精准相加
+> 浮点数精准相加, **支持同单位数相加**
 
 * @param num1 {number, string}
 * @param num2 {number, string}
@@ -14,5 +14,5 @@
 0.1 + 0.2 > 0.3 // true
 
 addNums(0.1, 0.2) // 0.3
-
+addNums('12%', '20%') // 32%
 ```

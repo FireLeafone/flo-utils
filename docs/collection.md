@@ -328,5 +328,5 @@ const tree = [{
       }
     ]
   }];
-getValueByPath("0.children.1.children.name"); // child2-child
+getValueByPath("0.children.1.children.0.name"); // child2-child
 ```

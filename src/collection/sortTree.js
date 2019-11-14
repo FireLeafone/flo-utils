@@ -41,7 +41,7 @@ const sortTree = (tree = [], sort = 'asc', sortKey = 'sort', childrenKey = 'chil
           return 0;
         }
     
-        if (sort === 'asc') {
+        if (sort === 'asc') { // 升序
           return a[sortKey] - b[sortKey];
         } else if (sort === 'desc') {
           return b[sortKey] - a[sortKey];

@@ -35,6 +35,7 @@
 export {default as filterParams} from './ajax/filterParams';
 export {default as paramToObj} from './ajax/paramToObj';
 export {default as queryString} from './ajax/queryString';
+export {default as getIP} from './ajax/getIP';
 
 /**
  * basic

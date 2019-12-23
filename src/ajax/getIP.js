@@ -1,15 +1,19 @@
 /**
  * 获取 IP 通过 webkitRTCPeerConnection
  * @param callback {Function} 回调函数
- * @param error {Function} 失败回调函数
  * @return undefined
  * JavaScript是无法获得或存储在客户端的IP。
  * 但是由于JavaScript能够发送HTTP请求，而服务器端语言能够获取用户的公网IP，所以你可以利用这个获取IP。
  * 换句话说，如果你想得到一个用户就取决于请求任何服务器检索公网IP
  */
-function getIP(callback, error) {
+function getIP(callback) {
   // 兼容
   var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+  if (!myPeerConnection) {
+    callback && callback(false);
+    return;
+  }
+
   var pc = new myPeerConnection({
       iceServers: []
   }),
@@ -34,7 +38,7 @@ function getIP(callback, error) {
 
       pc.setLocalDescription(sdp, noop, noop);
   }).catch(function(reason) {
-    error && error(reason);
+    callback && callback(reason);
   });
 
   // 监听候选事件

@@ -5,6 +5,7 @@ Array [
   "filterParams",
   "paramToObj",
   "queryString",
+  "getIP",
   "beNaN",
   "isArray",
   "isLength",

@@ -38,3 +38,13 @@ filterParams(params);
 > 对象参数序列化转字符串
 
 对象参数转序列化`key=value&key=value`
+
+## getIP
+
+> 获取ip
+
+```js
+getIP(function(ip){
+    alert("Got IP! :" + ip);
+}，(err) => console.log(err));
+```

@@ -1,13 +1,13 @@
 /**
  * @name arrayTreeCallBack, 树形数组节点callback
- * @param {any} treeNodes 
- * @param {any} Fn (item, i, parent)
- * @param {any} options 
- * @returns 
+ * @param {array} treeNodes
+ * @param {function} Fn (item, i, parent)
+ * @param {object} config
+ * @returns
  */
 
 import isArray from '../basic/isArray';
-function arrayTreeCallBack (treeNodes, Fn, options) {
+function arrayTreeCallBack (treeNodes, Fn, config = {}) {
   if (!isArray(treeNodes)) {
     return new Error('data params is array type');
   }
@@ -16,8 +16,8 @@ function arrayTreeCallBack (treeNodes, Fn, options) {
     childrenKeyName: "children",
     traversal: "DLR" // LRD 后序遍历；DLR 前序遍历
   };
-  options = {...defaultOpt, ...options};
-  
+  const options = {...defaultOpt, ...config};
+
   function treeMap (tree, parent) {
     return tree.map((item, i) => {
       if (options.traversal == "DLR") {
@@ -26,7 +26,7 @@ function arrayTreeCallBack (treeNodes, Fn, options) {
           const children = item[options.childrenKeyName];
           item[options.childrenKeyName] = treeMap(children, item);
         }
-      } else if (options.traversal == "LRD") {        
+      } else if (options.traversal == "LRD") {
         if(item[options.childrenKeyName] && item[options.childrenKeyName].length) {
           const children = item[options.childrenKeyName];
           item[options.childrenKeyName] = treeMap(children, item);

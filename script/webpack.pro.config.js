@@ -5,6 +5,7 @@
  */
 
 var webpack = require("webpack");
+var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 var CONFIG = require("./config");
 var utils = require("./utils");
 
@@ -35,6 +36,7 @@ var baseConfig = {
     ]
   },
   plugins: [
+    new LodashModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(), // 2.x以上；编译时出错，跳过，编译后保错
   ]
 };

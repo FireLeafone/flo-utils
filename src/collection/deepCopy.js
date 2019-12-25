@@ -1,5 +1,6 @@
 /**
- *
+ * 支持基本类型 + function
+ * 不支持环引用，symbol等
  * @name 深拷贝
  * @param {*} o
  * @returns

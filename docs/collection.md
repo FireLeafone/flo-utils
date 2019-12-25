@@ -137,7 +137,7 @@ arrayTreeCallBack(tree, (item, i) => {
 
 ## deepCopy
 
-> 深拷贝
+> 深拷贝，基本类型+函数判断，复杂的请使用lodash.cloneDeep
 
 ```js
 deepCopy({});

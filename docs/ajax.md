@@ -41,7 +41,7 @@ filterParams(params);
 
 ## getIP
 
-> 获取ip
+> 获取ip，**浏览器兼容问题** [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/RTCPeerConnection/RTCPeerConnection#Browser_compatibility)
 
 ```js
 getIP(function(ip){

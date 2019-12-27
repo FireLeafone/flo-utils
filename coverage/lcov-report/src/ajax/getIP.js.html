@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">17.39% </span>
+        <span class="strong">18.52% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/23</span>
+        <span class='fraction'>5/27</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">31.58% </span>
+        <span class="strong">26.09% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>6/19</span>
+        <span class='fraction'>6/23</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">14.29% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>1/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">20% </span>
+        <span class="strong">20.83% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/20</span>
+        <span class='fraction'>5/24</span>
       </div>
     </div>
     <p class="quiet">
@@ -97,7 +97,13 @@
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -106,6 +112,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -120,21 +128,21 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -142,6 +150,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -155,47 +167,53 @@
  * JavaScript是无法获得或存储在客户端的IP。
  * 但是由于JavaScript能够发送HTTP请求，而服务器端语言能够获取用户的公网IP，所以你可以利用这个获取IP。
  * 换句话说，如果你想得到一个用户就取决于请求任何服务器检索公网IP
+ * @link https://developer.mozilla.org/zh-CN/docs/Web/API/RTCPeerConnection/RTCPeerConnection#Browser_compatibility
  */
 function getIP(callback) {
-  // 兼容
-  var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (!myPeerConnection) {
-    callback &amp;&amp; callback(false);
-    return;
-  }
+  try {
+    // 兼容
+    var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!myPeerConnection) {
+      callback &amp;&amp; callback(false);
+      return;
+    }
 &nbsp;
-  var pc = <span class="cstat-no" title="statement not covered" >new myPeerConnection({</span>
-      iceServers: []
-  }),
-  noop = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fu</span>nction() {},</span>
-  localIPs = <span class="cstat-no" title="statement not covered" >{},</span>
-  ipRegex = <span class="cstat-no" title="statement not covered" >/([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g;</span>
+    var pc = <span class="cstat-no" title="statement not covered" >new myPeerConnection({</span>
+        iceServers: []
+    }),
+    noop = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >fu</span>nction() {},</span>
+    localIPs = <span class="cstat-no" title="statement not covered" >{},</span>
+    ipRegex = <span class="cstat-no" title="statement not covered" >/([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g;</span>
 &nbsp;
-  function <span class="fstat-no" title="function not covered" >iterateIP(</span>ip) {
-<span class="cstat-no" title="statement not covered" >      if (!localIPs[ip]) <span class="cstat-no" title="statement not covered" >callback(ip);</span></span>
+    const iterateIP = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(i</span>p) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (!localIPs[ip]) <span class="cstat-no" title="statement not covered" >callback &amp;&amp; callback(ip);</span></span>
 <span class="cstat-no" title="statement not covered" >      localIPs[ip] = true;</span>
+    };
+&nbsp;
+    // 创建虚假数据通道
+<span class="cstat-no" title="statement not covered" >    pc.createDataChannel("");</span>
+&nbsp;
+    // 创建服务，设置描述
+<span class="cstat-no" title="statement not covered" >    pc.createOffer().then(<span class="fstat-no" title="function not covered" >fu</span>nction(sdp) {</span>
+<span class="cstat-no" title="statement not covered" >        sdp.sdp.split('\n').forEach(<span class="fstat-no" title="function not covered" >fu</span>nction(line) {</span>
+<span class="cstat-no" title="statement not covered" >            if (line.indexOf('candidate') &lt; 0) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered" >            line.match(ipRegex).forEach(iterateIP);</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        pc.setLocalDescription(sdp, noop, noop);</span>
+    }).catch(<span class="fstat-no" title="function not covered" >fu</span>nction(reason) {
+<span class="cstat-no" title="statement not covered" >      callback &amp;&amp; callback(reason);</span>
+    });
+&nbsp;
+    // 监听候选事件
+<span class="cstat-no" title="statement not covered" >    pc.onicecandidate = <span class="fstat-no" title="function not covered" >fu</span>nction(ice) {</span>
+<span class="cstat-no" title="statement not covered" >        if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered" >        ice.candidate.candidate.match(ipRegex).forEach(iterateIP);</span>
+    };
+  } catch (err) {
+<span class="cstat-no" title="statement not covered" >    console.error(err);</span>
+<span class="cstat-no" title="statement not covered" >    callback &amp;&amp; callback(false);</span>
   }
-&nbsp;
-  // 创建虚假数据通道
-<span class="cstat-no" title="statement not covered" >  pc.createDataChannel("");</span>
-&nbsp;
-  // 创建服务，设置描述
-<span class="cstat-no" title="statement not covered" >  pc.createOffer().then(<span class="fstat-no" title="function not covered" >fu</span>nction(sdp) {</span>
-<span class="cstat-no" title="statement not covered" >      sdp.sdp.split('\n').forEach(<span class="fstat-no" title="function not covered" >fu</span>nction(line) {</span>
-<span class="cstat-no" title="statement not covered" >          if (line.indexOf('candidate') &lt; 0) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >          line.match(ipRegex).forEach(iterateIP);</span>
-      });
-&nbsp;
-<span class="cstat-no" title="statement not covered" >      pc.setLocalDescription(sdp, noop, noop);</span>
-  }).catch(<span class="fstat-no" title="function not covered" >fu</span>nction(reason) {
-<span class="cstat-no" title="statement not covered" >    callback &amp;&amp; callback(reason);</span>
-  });
-&nbsp;
-  // 监听候选事件
-<span class="cstat-no" title="statement not covered" >  pc.onicecandidate = <span class="fstat-no" title="function not covered" >fu</span>nction(ice) {</span>
-<span class="cstat-no" title="statement not covered" >      if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >      ice.candidate.candidate.match(ipRegex).forEach(iterateIP);</span>
-  };
 }
 &nbsp;
 export default getIP;
@@ -205,7 +223,7 @@ export default getIP;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 23 2019 16:06:48 GMT+0800 (GMT+08:00)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Dec 27 2019 10:07:14 GMT+0800 (GMT+08:00)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

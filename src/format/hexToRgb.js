@@ -18,7 +18,7 @@ function hexToRgb(hex, a = 0.8) {
     rgb.push(parseInt(color, 0x10)); // 按16进制将字符串转换为数字
   });
 
-  return `rgb(${rgb.join(", ")}, ${a})`;
+  return `rgba(${rgb.join(", ")}, ${a})`;
 }
 
 export default hexToRgb;

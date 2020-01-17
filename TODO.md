@@ -3,3 +3,5 @@
 > pm todolist
 
 方法收集ing...
+
+- [ ] 支持TS

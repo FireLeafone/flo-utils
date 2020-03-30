@@ -16,7 +16,10 @@
     "ready": "npm run test && npm run build && npm run babel-build",
     "git": "git add -A && git commit -m 'release pro version' && git push origin master",
     "release": "npm publish",
-    "repair": "npm run ready && npm run release"
+    "repair": "npm run ready && npm run release",
+    "tools-dist": "fire-tools run dist",
+    "tools-compile": "fire-tools run compile",
+    "tools-build": "npm run tools-compile && npm run tools-dist"
   },
   "repository": {
     "type": "git",

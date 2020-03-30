@@ -5,5 +5,5 @@
  */
 const path = require("path");
 module.exports = {
-  buildPath: path.resolve(__dirname, "../min")
+  buildPath: path.resolve(__dirname, "../dist")
 };

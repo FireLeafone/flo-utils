@@ -1,8 +1,13 @@
+
+function resolve(moduleName) {
+  return require.resolve(moduleName);
+}
+
 module.exports = function (api) {
-  api.cache(true);
+  api && api.cache(true);
   const presets = [
     [
-      "@babel/preset-env",
+      resolve("@babel/preset-env"),
       {
         "modules": "auto",
         "targets": {
@@ -18,8 +23,8 @@ module.exports = function (api) {
   ];
 
   const plugins = [
-    "lodash",
-    "@babel/plugin-transform-runtime",
+    resolve("lodash"),
+    resolve("@babel/plugin-transform-runtime")
   ];
 
   return {

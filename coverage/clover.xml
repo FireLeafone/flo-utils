@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1585828303738" clover="3.2.0">
-  <project timestamp="1585828303738" name="All files">
-    <metrics statements="379" coveredstatements="322" conditionals="297" coveredconditionals="219" methods="74" coveredmethods="67" elements="750" coveredelements="608" complexity="0" loc="379" ncloc="379" packages="1" files="43" classes="43"/>
+<coverage generated="1585829236982" clover="3.2.0">
+  <project timestamp="1585829236982" name="All files">
+    <metrics statements="379" coveredstatements="327" conditionals="297" coveredconditionals="227" methods="74" coveredmethods="67" elements="750" coveredelements="621" complexity="0" loc="379" ncloc="379" packages="1" files="43" classes="43"/>
     <file name="addNums.js" path="D:\wz\web-road\fire-leaf-one\FL-utils\src\addNums.js">
       <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
       <line num="8" count="2" type="stmt"/>
@@ -290,10 +290,10 @@
     </file>
     <file name="isArray.js" path="D:\wz\web-road\fire-leaf-one\FL-utils\src\isArray.js">
       <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
-      <line num="18" count="46" type="cond" truecount="1" falsecount="1"/>
+      <line num="18" count="48" type="cond" truecount="1" falsecount="1"/>
       <line num="19" count="0" type="stmt"/>
       <line num="20" count="0" type="stmt"/>
-      <line num="23" count="46" type="stmt"/>
+      <line num="23" count="48" type="stmt"/>
     </file>
     <file name="isEquivalentObj.js" path="D:\wz\web-road\fire-leaf-one\FL-utils\src\isEquivalentObj.js">
       <metrics statements="12" coveredstatements="10" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
@@ -325,7 +325,7 @@
     </file>
     <file name="isObject.js" path="D:\wz\web-road\fire-leaf-one\FL-utils\src\isObject.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="17" count="42" type="stmt"/>
+      <line num="17" count="48" type="stmt"/>
     </file>
     <file name="isRepeatArray.js" path="D:\wz\web-road\fire-leaf-one\FL-utils\src\isRepeatArray.js">
       <metrics statements="8" coveredstatements="7" conditionals="8" coveredconditionals="5" methods="1" coveredmethods="1"/>
@@ -430,34 +430,34 @@
       <line num="18" count="2" type="stmt"/>
     </file>
     <file name="sortTree.js" path="D:\wz\web-road\fire-leaf-one\FL-utils\src\sortTree.js">
-      <metrics statements="27" coveredstatements="18" conditionals="44" coveredconditionals="28" methods="2" coveredmethods="2"/>
+      <metrics statements="27" coveredstatements="23" conditionals="44" coveredconditionals="36" methods="2" coveredmethods="2"/>
       <line num="14" count="2" type="stmt"/>
       <line num="16" count="2" type="cond" truecount="2" falsecount="2"/>
-      <line num="17" count="5" type="cond" truecount="4" falsecount="0"/>
-      <line num="19" count="4" type="cond" truecount="1" falsecount="1"/>
-      <line num="20" count="0" type="cond" truecount="0" falsecount="4"/>
-      <line num="21" count="0" type="stmt"/>
-      <line num="24" count="4" type="stmt"/>
-      <line num="25" count="10" type="cond" truecount="4" falsecount="0"/>
-      <line num="26" count="4" type="cond" truecount="1" falsecount="1"/>
+      <line num="17" count="7" type="cond" truecount="4" falsecount="0"/>
+      <line num="19" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="1" type="cond" truecount="3" falsecount="1"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="24" count="5" type="stmt"/>
+      <line num="25" count="15" type="cond" truecount="4" falsecount="0"/>
+      <line num="26" count="6" type="cond" truecount="2" falsecount="0"/>
       <line num="27" count="4" type="stmt"/>
-      <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="29" count="0" type="stmt"/>
+      <line num="28" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="29" count="2" type="stmt"/>
       <line num="31" count="0" type="stmt"/>
-      <line num="33" count="6" type="cond" truecount="4" falsecount="0"/>
-      <line num="34" count="3" type="cond" truecount="2" falsecount="2"/>
-      <line num="35" count="0" type="stmt"/>
-      <line num="37" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="33" count="9" type="cond" truecount="4" falsecount="0"/>
+      <line num="34" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="37" count="4" type="cond" truecount="4" falsecount="0"/>
       <line num="38" count="1" type="stmt"/>
-      <line num="40" count="3" type="cond" truecount="4" falsecount="2"/>
+      <line num="40" count="4" type="cond" truecount="4" falsecount="2"/>
       <line num="41" count="0" type="stmt"/>
-      <line num="44" count="3" type="cond" truecount="1" falsecount="1"/>
+      <line num="44" count="4" type="cond" truecount="1" falsecount="1"/>
       <line num="45" count="0" type="stmt"/>
-      <line num="46" count="3" type="cond" truecount="1" falsecount="1"/>
-      <line num="47" count="3" type="stmt"/>
+      <line num="46" count="4" type="cond" truecount="1" falsecount="1"/>
+      <line num="47" count="4" type="stmt"/>
       <line num="49" count="0" type="stmt"/>
-      <line num="52" count="3" type="stmt"/>
-      <line num="55" count="4" type="stmt"/>
+      <line num="52" count="5" type="stmt"/>
+      <line num="55" count="6" type="stmt"/>
     </file>
     <file name="throttle.js" path="D:\wz\web-road\fire-leaf-one\FL-utils\src\throttle.js">
       <metrics statements="8" coveredstatements="8" conditionals="3" coveredconditionals="2" methods="4" coveredmethods="4"/>

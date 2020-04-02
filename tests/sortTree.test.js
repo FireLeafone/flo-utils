@@ -10,10 +10,10 @@ const objA = [
         age: 1,
         children: [
           {
-            age: 3
+            age: 2
           },
           {
-            age: 2
+            age: 3
           }
         ]
       }
@@ -67,18 +67,18 @@ describe('tree data sort', () => {
             age: 1,
             children: [
               {
-                age: 2
+                age: 3
               },
               {
-                age: 3
+                age: 2
               }
             ]
           }
         ]
       },
-      2,
+      5,
       3,
-      5
+      2
     ]);
   });
 });

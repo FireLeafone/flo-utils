@@ -36,7 +36,8 @@
   "homepage": "https://github.com/FireLeafone/FL-utils#readme",
   "dependencies": {
     "lodash": "^4.17.15",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "pre-commit": "^1.2.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.7",
@@ -66,5 +67,8 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "pre-commit": [
+    "lint"
   ]
 }

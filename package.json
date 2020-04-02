@@ -1,25 +1,24 @@
 {
   "name": "flo-utils",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "some utils ",
   "main": "lib/index.js",
   "files": [
     "lib",
-    "min"
+    "es",
+    "dist"
   ],
   "scripts": {
     "test": "npm run lint && npm run unit",
     "unit": "jest --no-cache",
     "lint": "eslint --fix --ext .js src",
-    "build": "node script/build.js",
-    "babel-build": "babel src -d lib --ignore __tests__",
-    "ready": "npm run test && npm run build && npm run babel-build",
+    "ready": "npm run test && npm run build",
     "git": "git add -A && git commit -m 'release pro version' && git push origin master",
     "release": "npm publish",
     "repair": "npm run ready && npm run release",
-    "tools-dist": "fire-tools run dist",
-    "tools-compile": "fire-tools run compile",
-    "tools-build": "npm run tools-compile && npm run tools-dist"
+    "dist": "fire-tools run dist",
+    "compile": "fire-tools run compile",
+    "build": "npm run compile && npm run dist"
   },
   "repository": {
     "type": "git",
@@ -46,13 +45,13 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/runtime": "^7.5.5",
     "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
+    "babel-jest": "^25.2.6",
     "babel-loader": "^8.0.6",
     "babel-plugin-lodash": "^3.3.4",
     "chalk": "^2.4.2",
     "eslint": "^6.3.0",
     "eslint-plugin-jest": "^22.16.0",
-    "jest": "^24.9.0",
+    "jest": "^25.2.6",
     "lodash-webpack-plugin": "^0.11.5",
     "ora": "^3.4.0",
     "rimraf": "^3.0.0",

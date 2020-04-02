@@ -9,6 +9,10 @@ var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 var CONFIG = require("./config");
 var utils = require("./utils");
 
+const babelConfig = require('../babelConfig.js')();
+
+console.log(babelConfig);
+
 var baseConfig = {
   mode: "production",
   entry: utils.resolve("src/index"),
@@ -31,7 +35,8 @@ var baseConfig = {
       {
         test: /\.js$/,
         loader: "babel-loader", // 缓存loader执行结果
-        exclude: /(node_modules)/
+        exclude: /(node_modules)/,
+        options: babelConfig
       }
     ]
   },

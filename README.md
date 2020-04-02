@@ -1,6 +1,6 @@
 # FLO-utils
 
-> 项目中常用的一些方法集库 🚀
+> 项目中常用的工具方法集库 🚀 ☕
 
 ---
 
@@ -33,10 +33,10 @@ npm install flo-utils --save
 
 ```js
 // 按需加载
-import {...} from 'flo-utils'
-import isNull from 'flo-utils/lib/basic/isNull'
+import {...} from 'flo-utils' // babel-plugin-import
+import isNull from 'flo-utils/lib/isNull'
 // script 引入
-<script src="flo-utils/min/floUtils.js"></scritp>
+<script src="flo-utils/dist/floUtils.js"></scritp>
 ```
 
 ## 类别区分

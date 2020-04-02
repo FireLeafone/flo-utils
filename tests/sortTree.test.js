@@ -4,7 +4,20 @@ const nums = [1, 2, 5, 3];
 const strs = ["a", "b", "d", "c"];
 const objA = [
   {
-    age: 10
+    age: 10,
+    children: [
+      {
+        age: 1,
+        children: [
+          {
+            age: 3
+          },
+          {
+            age: 2
+          }
+        ]
+      }
+    ]
   },
   {
     age: 12,
@@ -17,7 +30,10 @@ const objA = [
         age: 0
       }
     ]
-  }
+  },
+  3,
+  5,
+  2
 ];
 
 describe('tree data sort', () => {
@@ -45,8 +61,24 @@ describe('tree data sort', () => {
         ]
       },
       {
-        age: 10
-      }
+        age: 10,
+        children: [
+          {
+            age: 1,
+            children: [
+              {
+                age: 2
+              },
+              {
+                age: 3
+              }
+            ]
+          }
+        ]
+      },
+      2,
+      3,
+      5
     ]);
   });
 });

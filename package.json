@@ -13,7 +13,7 @@
     "unit": "jest --no-cache",
     "lint": "eslint --fix --ext .js src",
     "ready": "npm run test && npm run build",
-    "git": "git add -A && git commit -m 'release pro version' && git push origin master",
+    "git": "npm run lint && git push origin",
     "release": "npm publish",
     "repair": "npm run ready && npm run release",
     "dist": "fire-tools run dist",

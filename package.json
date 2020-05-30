@@ -52,6 +52,7 @@
     "chalk": "^2.4.2",
     "eslint": "^6.3.0",
     "eslint-plugin-jest": "^22.16.0",
+    "fire-tools": "^0.1.3",
     "jest": "^25.2.6",
     "lodash-webpack-plugin": "^0.11.5",
     "ora": "^3.4.0",

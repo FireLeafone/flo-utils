@@ -9,17 +9,17 @@ function randomColor(type = '16#', alpha = 1) {
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);
     const b = Math.floor(Math.random() * 255);
-    return `rgba(${  r  },${  g  },${  b  },${  alpha  })`;
+    return `rgba(${r},${g},${b},${alpha})`;
   }
   if (type === '16#') {
-    return (
-      `#${
+    return `#${
       // eslint-disable-next-line no-bitwise
-      (`00000${((Math.random() * 0x1000000) << 0).toString(16)}`).substr(-6)}`
-    );
-  } if (type === 'hsla') {
+      `00000${((Math.random() * 0x1000000) << 0).toString(16)}`.substr(-6)
+    }`;
+  }
+  if (type === 'hsla') {
     const colorAngle = Math.floor(Math.random() * 360);
-    return `hsla(${  colorAngle  },100%,50%,${  alpha  })`;
+    return `hsla(${colorAngle},100%,50%,${alpha})`;
   }
 
   return '';

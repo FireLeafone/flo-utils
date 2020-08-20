@@ -9,9 +9,8 @@ function uniqueArray(arr, key) {
   if (arr.length) {
     if (_.isObject(arr[0])) {
       return key ? _.uniqBy(arr, key) : arr;
-    } 
-      return _.uniq(arr);
-    
+    }
+    return _.uniq(arr);
   }
   return [];
 }

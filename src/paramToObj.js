@@ -12,12 +12,10 @@ function paramToObj(paramsString) {
     return DEFAULT_VALUE;
   }
   return JSON.parse(
-    `{"${ 
-      decodeURIComponent(search)
-        .replace(/"/g, '\\"')
-        .replace(/&/g, '","')
-        .replace(/=/g, '":"') 
-      }"}`,
+    `{"${decodeURIComponent(search)
+      .replace(/"/g, '\\"')
+      .replace(/&/g, '","')
+      .replace(/=/g, '":"')}"}`,
   );
 }
 

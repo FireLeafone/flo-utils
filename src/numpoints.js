@@ -23,7 +23,7 @@ function numPoints(num, precision) {
   }
   if (beNaN(toNum)) return num || '';
 
-  const str = precision ? `${toNum.toFixed(precision)  }` : `${toNum  }`;
+  const str = precision ? `${toNum.toFixed(precision)}` : `${toNum}`;
   let decimal = str.split('.')[1] || ''; // 小数部分
   const inter = str.split('.')[0] || ''; // 整数部分
   const revInter = inter.replace(/(?=(?!\b)(\d{3})+$)/g, ',');
@@ -33,12 +33,12 @@ function numPoints(num, precision) {
     if (decimal.length < precision) {
       decimal += add0;
     }
-    return `${revInter  }.${  decimal}`;
-  } if (precision === 0) {
+    return `${revInter}.${decimal}`;
+  }
+  if (precision === 0) {
     return revInter;
   }
-    return decimal ? `${revInter  }.${  decimal}` : revInter;
-
+  return decimal ? `${revInter}.${decimal}` : revInter;
 }
 
 export default numPoints;

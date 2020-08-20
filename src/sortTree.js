@@ -38,12 +38,13 @@ const sortTree = (
       if (isNumber(a) && isNumber(b)) {
         if (sort === 'asc') {
           return a - b;
-        } if (sort === 'desc') {
+        }
+        if (sort === 'desc') {
           return b - a;
         }
-          return 0;
-
-      } if (isObject(a) && isObject(b)) {
+        return 0;
+      }
+      if (isObject(a) && isObject(b)) {
         if (a[childrenKey] && a[childrenKey].length) {
           a[childrenKey] = sortTree(a[childrenKey], sort, sortKey, childrenKey);
         }
@@ -60,11 +61,11 @@ const sortTree = (
         if (sort === 'asc') {
           // 升序
           return a[sortKey] - b[sortKey];
-        } if (sort === 'desc') {
+        }
+        if (sort === 'desc') {
           return b[sortKey] - a[sortKey];
         }
-          return 0;
-
+        return 0;
       }
       return 0;
     });

@@ -11,7 +11,7 @@ import isArray from './isArray';
 function queryString(params) {
   let sendData = params;
   if (isObject(sendData)) {
-    sendData = { ...sendData};
+    sendData = { ...sendData };
     sendData = Object.keys(sendData)
       .map((key) => {
         let value = sendData[key];

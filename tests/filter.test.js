@@ -6,6 +6,8 @@ describe('the collection filter', () => {
   });
 
   it('object filter', () => {
-    expect(filter({a: 2, b: 3, c: 5}, (value, key) => value > 2 && key!== 'b')).toEqual({c: 5});
+    expect(
+      filter({ a: 2, b: 3, c: 5 }, (value, key) => value > 2 && key !== 'b'),
+    ).toEqual({ c: 5 });
   });
 });

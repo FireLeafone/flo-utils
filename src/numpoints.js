@@ -15,30 +15,29 @@
 import _ from 'lodash';
 import beNaN from './beNaN';
 
-function numPoints (num, precision) {
+function numPoints(num, precision) {
   const toNum = _.toNumber(num);
   if (precision && !_.isNumber(precision)) {
-    new Error('srcond param type is number');
+    console.warn('srcond param type is number');
     return num || '';
   }
   if (beNaN(toNum)) return num || '';
 
-  var str = precision ? toNum.toFixed(precision) + '' : toNum + "";
-  var decimal = str.split('.')[1] || ''; // 小数部分
-  var inter = str.split('.')[0] || ''; // 整数部分
-  var revInter = inter.replace(/(?=(?!\b)(\d{3})+$)/g, ',');
+  const str = precision ? `${toNum.toFixed(precision)  }` : `${toNum  }`;
+  let decimal = str.split('.')[1] || ''; // 小数部分
+  const inter = str.split('.')[0] || ''; // 整数部分
+  const revInter = inter.replace(/(?=(?!\b)(\d{3})+$)/g, ',');
 
   if (precision) {
     const add0 = new Array(precision + 1).join(0).split('').join('');
     if (decimal.length < precision) {
       decimal += add0;
     }
-    return revInter + '.' + decimal;
-  } else if (precision == 0) {
+    return `${revInter  }.${  decimal}`;
+  } if (precision === 0) {
     return revInter;
-  } else {
-    return decimal ? revInter + '.' + decimal : revInter;
   }
+    return decimal ? `${revInter  }.${  decimal}` : revInter;
 
 }
 

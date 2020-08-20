@@ -5,25 +5,27 @@
  * @param {*} o
  * @returns
  */
-function deepCopy (o) {
+function deepCopy(o) {
   if (o instanceof Array) {
     const n = [];
-    for (let i = 0; i < o.length; ++i) {
+    for (let i = 0; i < o.length; i += 1) {
       n[i] = deepCopy(o[i]);
     }
     return n;
-  } else if (typeof o === 'function') {
-    return o;
-  } else if (o instanceof Object) {
-    const n = {};
-    let i;
-    for (i in o) {
-      n[i] = deepCopy(o[i]);
-    }
-    return n;
-  } else {
+  }
+  if (typeof o === 'function') {
     return o;
   }
+  if (o instanceof Object) {
+    const n = {};
+    for (const key in o) {
+      if (Object.prototype.hasOwnProperty.call(o, key)) {
+        n[key] = deepCopy(o[key]);
+      }
+    }
+    return n;
+  }
+  return o;
 }
 
 export default deepCopy;

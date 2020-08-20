@@ -11,10 +11,10 @@ const params = {
   id: 0,
   name: 'one',
   age: '',
-  obj: {age: 10},
+  obj: { age: 10 },
   arr: [1],
   emptyA: [],
-  emptyO: {}
+  emptyO: {},
 };
 filterParams(params);
 /**
@@ -41,7 +41,7 @@ filterParams(params);
 
 ## getIP
 
-> 获取ip，**浏览器兼容问题** [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/RTCPeerConnection/RTCPeerConnection#Browser_compatibility)
+> 获取 ip，**浏览器兼容问题** [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/RTCPeerConnection/RTCPeerConnection#Browser_compatibility)
 
 ```js
 getIP(function(ip){

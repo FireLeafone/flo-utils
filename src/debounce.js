@@ -4,7 +4,7 @@
  * @param {number} [step=100]
  * @returns
  * @example
- * 
+ *
  const debounceAjax = debounce((newParams)=>{
   return new Promise((resolve, reject) => {
     xhr({
@@ -40,11 +40,11 @@ export function apiExample (params) {
 
 function debounce(fn, step = 100) {
   let timeout = null;
-  return function () {
+  return (...args) => {
     clearTimeout(timeout);
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       timeout = setTimeout(() => {
-        resolve(fn.apply(this, arguments));
+        resolve(fn.apply(this, args));
       }, step);
     });
   };

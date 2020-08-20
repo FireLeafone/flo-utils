@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
 /**
  * config paths
  */
-const path = require("path");
+const path = require('path');
 module.exports = {
-  buildPath: path.resolve(__dirname, "../dist")
+  buildPath: path.resolve(__dirname, '../dist'),
 };

@@ -7,12 +7,15 @@
  */
 import isArray from './isArray';
 
-function filterTree (data, id, key = "id") {
+function filterTree(data, id, key = 'id') {
   if (!isArray(data)) {
     return new Error('data params is array type');
   }
-  var newData = data.filter(x => x[key] !== id);
-  newData.forEach(x => x.children && (x.children = filterTree(x.children, id, key)));
+  const newData = data.filter((x) => x[key] !== id);
+  newData.forEach((item) => {
+    const x = { ...item };
+    x.children && (x.children = filterTree(x.children, id, key));
+  });
   return newData;
 }
 

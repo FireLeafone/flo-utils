@@ -8,6 +8,8 @@ describe('array unique', () => {
     expect(uniqueArray(['sad', 'd', 'd'])).toEqual(['sad', 'd']);
   });
   it('object', () => {
-    expect(uniqueArray([{name: 'a'}, {name: 'a'}, {name: 'b'}], 'name')).toEqual([{name: 'a'}, {name: 'b'}]);
+    expect(
+      uniqueArray([{ name: 'a' }, { name: 'a' }, { name: 'b' }], 'name'),
+    ).toEqual([{ name: 'a' }, { name: 'b' }]);
   });
 });

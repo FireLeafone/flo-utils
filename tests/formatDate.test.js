@@ -5,7 +5,7 @@ const year = date.getFullYear();
 const month = date.getMonth() + 1;
 const day = date.getDate();
 
-function addLength (n) {
+function addLength(n) {
   n = n + '';
   if (n.length < 2) {
     return '0' + n;

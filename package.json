@@ -1,6 +1,6 @@
 {
   "name": "flo-utils",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "some utils ",
   "main": "lib/index.js",
   "files": [
@@ -16,10 +16,9 @@
     "prettier": "prettier -c --write \"**/**\"",
     "dist": "fire-tools run dist",
     "build": "npm run compile && npm run dist",
-    "repair": "npm run ready && npm run release",
     "ready": "npm run test && npm run build",
     "compile": "fire-tools run compile",
-    "release": "npm publish"
+    "release": "npm run ready && npm publish"
   },
   "repository": {
     "type": "git",

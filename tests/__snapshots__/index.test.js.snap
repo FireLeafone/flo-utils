@@ -44,5 +44,9 @@ Array [
   "randomId",
   "randomColor",
   "trim",
+  "useCompose",
+  "useCurry",
+  "usePartialHook",
+  "useDivide",
 ]
 `;

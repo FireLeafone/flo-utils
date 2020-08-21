@@ -67,3 +67,24 @@ const foo = usePartialHook(mockA, [10], true);
 
 foo(2); // -8
 ```
+
+## useDivide
+
+> 数据分而治之，汇总输出; 支持数组、对象
+
+- @name useDivide
+- @param {*} [hooks=[]]
+
+```js
+[{
+  key: string|number,
+  hook: v => dv
+}]
+```
+
+- @param {*} [divide=(v) => v]
+
+```js
+const divideF = useDivide([{key: 'a', hook: (a) => a + 1}])
+divideF({a: 3}) // {a: 4}
+```

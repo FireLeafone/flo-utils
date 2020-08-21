@@ -5,23 +5,19 @@ function resolve(moduleName) {
 module.exports = function (modules) {
   const presets = [
     [
-      resolve("@babel/preset-env"),
+      resolve('@babel/preset-env'),
       {
-        "modules": modules,
-        "targets": {
-          "browsers": [
-            "> 1%",
-            "last 2 versions",
-            "not ie <= 8"
-          ],
-          node: 'current'
-        }
-      }
-    ]
+        modules,
+        targets: {
+          browsers: ['> 1%', 'last 2 versions', 'not ie <= 8'],
+          node: 'current',
+        },
+      },
+    ],
   ];
 
   const plugins = [
-    resolve("babel-plugin-lodash"),
+    resolve('babel-plugin-lodash'),
     [
       resolve('@babel/plugin-transform-runtime'),
       {
@@ -32,6 +28,6 @@ module.exports = function (modules) {
 
   return {
     presets,
-    plugins
+    plugins,
   };
 };

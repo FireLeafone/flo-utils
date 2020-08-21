@@ -5,9 +5,9 @@ describe('check object empty', () => {
     expect(emptyObj({})).toBeTruthy();
   });
   it('no empty object', () => {
-    expect(emptyObj({prop: 1})).not.toBeTruthy();
+    expect(emptyObj({ prop: 1 })).not.toBeTruthy();
   });
   it('no object', () => {
-    expect(emptyObj("")).not.toBeTruthy();
+    expect(emptyObj('')).not.toBeTruthy();
   });
 });

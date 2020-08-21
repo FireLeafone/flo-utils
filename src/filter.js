@@ -11,16 +11,17 @@
 import isArray from './isArray';
 import isObject from './isObject';
 
-function filter (collection, func) {
+function filter(collection, func) {
   let result = null;
   if (typeof func !== 'function') {
-    return new Error('second param is object or array !');
+    console.warn('second param is object or array !');
+    return [];
   }
   if (isArray(collection)) {
     result = collection.filter((item, i) => func(item, i));
   } else if (isObject(collection)) {
     const keysArr = Object.keys(collection);
-    const keysFilter = keysArr.filter(key => func(collection[key], key));
+    const keysFilter = keysArr.filter((key) => func(collection[key], key));
 
     result = {};
     for (const key of keysFilter) {
@@ -31,7 +32,8 @@ function filter (collection, func) {
       result[key] = keyVal;
     }
   } else {
-    return new Error('1st param is object or array !');
+    console.warn('1st param is object or array !');
+    return [];
   }
 
   return result;

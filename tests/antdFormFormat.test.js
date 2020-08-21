@@ -1,14 +1,14 @@
-import antdFormFormat, {DEFAULT_VALUE} from '../src/antdFormFormat';
+import antdFormFormat, { DEFAULT_VALUE } from '../src/antdFormFormat';
 
 describe('antd form format', () => {
   it('object to value', () => {
-    expect(antdFormFormat({name: 'ad', age: 12})).toEqual({
+    expect(antdFormFormat({ name: 'ad', age: 12 })).toEqual({
       name: {
-        value: 'ad'
+        value: 'ad',
       },
       age: {
-        value: 12
-      }
+        value: 12,
+      },
     });
   });
   it('empty param', () => {

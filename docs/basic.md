@@ -4,7 +4,7 @@
 
 ## beNaN
 
-> NaN判断
+> NaN 判断
 
 ```js
 beNaN(NaN);
@@ -37,7 +37,7 @@ isArray(document.body.children);
 
 ## isLength
 
-> 大于等于0的长度判断，不能超js数字范围
+> 大于等于 0 的长度判断，不能超 js 数字范围
 
 ```js
 isLength(3);
@@ -112,7 +112,7 @@ isString(1);
 
 ## isUndefined
 
-> undefined判断
+> undefined 判断
 
 ```js
 isUndefined(undefined);

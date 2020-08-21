@@ -10,18 +10,21 @@
 function getIP(callback) {
   try {
     // 兼容
-    var myPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
-    if (!myPeerConnection) {
+    const MyPeerConnection =
+      window.RTCPeerConnection ||
+      window.mozRTCPeerConnection ||
+      window.webkitRTCPeerConnection;
+    if (!MyPeerConnection) {
       callback && callback(false);
       return;
     }
 
-    var pc = new myPeerConnection({
-        iceServers: []
-    }),
-    noop = function() {},
-    localIPs = {},
-    ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g;
+    const pc = new MyPeerConnection({
+      iceServers: [],
+    });
+    const noop = () => {};
+    const localIPs = {};
+    const ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g;
 
     const iterateIP = (ip) => {
       if (!localIPs[ip]) callback && callback(ip);
@@ -29,24 +32,32 @@ function getIP(callback) {
     };
 
     // 创建虚假数据通道
-    pc.createDataChannel("");
+    pc.createDataChannel('');
 
     // 创建服务，设置描述
-    pc.createOffer().then(function(sdp) {
-        sdp.sdp.split('\n').forEach(function(line) {
-            if (line.indexOf('candidate') < 0) return;
-            line.match(ipRegex).forEach(iterateIP);
+    pc.createOffer()
+      .then((sdp) => {
+        sdp.sdp.split('\n').forEach((line) => {
+          if (line.indexOf('candidate') < 0) return;
+          line.match(ipRegex).forEach(iterateIP);
         });
 
         pc.setLocalDescription(sdp, noop, noop);
-    }).catch(function(reason) {
-      callback && callback(reason);
-    });
+      })
+      .catch((reason) => {
+        callback && callback(reason);
+      });
 
     // 监听候选事件
-    pc.onicecandidate = function(ice) {
-        if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) return;
-        ice.candidate.candidate.match(ipRegex).forEach(iterateIP);
+    pc.onicecandidate = (ice) => {
+      if (
+        !ice ||
+        !ice.candidate ||
+        !ice.candidate.candidate ||
+        !ice.candidate.candidate.match(ipRegex)
+      )
+        return;
+      ice.candidate.candidate.match(ipRegex).forEach(iterateIP);
     };
   } catch (err) {
     console.error(err);

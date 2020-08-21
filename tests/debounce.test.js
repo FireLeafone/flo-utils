@@ -9,21 +9,21 @@ describe('High frequency stabilization', () => {
     }, 500);
     function ajaxFunc(params) {
       return new Promise((resolve) => {
-        debounceFunc(params).then(res => {
+        debounceFunc(params).then((res) => {
           resolve(res);
         });
       });
     }
 
-    function testClick () {
+    function testClick() {
       var n = 0;
       var time = null;
       time = setInterval(() => {
-        if (n >=5) {
+        if (n >= 5) {
           clearInterval(time);
           return;
         }
-        ajaxFunc(n).then(res => {
+        ajaxFunc(n).then((res) => {
           expect(res).toBe(4);
           done();
         });

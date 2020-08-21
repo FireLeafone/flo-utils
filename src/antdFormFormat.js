@@ -9,9 +9,9 @@ import isObject from './isObject';
 
 export const DEFAULT_VALUE = {};
 
-function antdFormFormat (record = {}) {
+function antdFormFormat(record = {}) {
   if (!isObject(record)) {
-    new Error ('param is object type');
+    console.warn('param is object type');
     return DEFAULT_VALUE;
   }
   const keys = Object.keys(record);

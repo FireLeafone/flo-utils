@@ -1,18 +1,18 @@
 import deepCopy from '../src/deepCopy';
 
-const obj = {"name": 'a'};
+const obj = { name: 'a' };
 
 const obj2 = {
-  "name": 'a',
-  "children": ['b', 'c']
+  name: 'a',
+  children: ['b', 'c'],
 };
 
 const obj3 = {
-  "name": 'a',
-  "children": ['b', 'c'],
-  "func": function () {
+  name: 'a',
+  children: ['b', 'c'],
+  func: function () {
     console.log('a');
-  }
+  },
 };
 
 describe('deep copy', () => {

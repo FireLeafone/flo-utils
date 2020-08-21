@@ -7,12 +7,11 @@ import isObject from './isObject';
 
 function emptyObj(obj) {
   if (!isObject(obj)) {
-    new Error('type is object');
+    console.warn('type is object');
     return false;
   }
-  for (var prop in obj){
-    if(Object.prototype.hasOwnProperty.call(obj, prop))
-    {
+  for (const prop in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, prop)) {
       return false;
     }
   }

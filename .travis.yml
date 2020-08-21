@@ -4,13 +4,13 @@ sudo: false
 
 notifications:
   email:
-  - wznarutone326@gmail.com
+    - wznarutone326@gmail.com
 
 node_js:
   - 8.11.1
 
 script:
-- |
+  - |
     if [ "$TEST_TYPE" = test ]; then
       npm test -- --coverage
     else
@@ -18,5 +18,5 @@ script:
     fi
 env:
   matrix:
-  - TEST_TYPE=lint
-  - TEST_TYPE=test
+    - TEST_TYPE=lint
+    - TEST_TYPE=test

@@ -8,7 +8,7 @@
 
 ```js
 emptyObj({}); // => true
-emptyObj({name: '12'}); // false
+emptyObj({ name: '12' }); // false
 ```
 
 ## isEquivalentObj
@@ -16,9 +16,9 @@ emptyObj({name: '12'}); // false
 > 对象判等
 
 ```js
-const o1 = {a: 1, b: 2};
-const o2 = {a: 1, b: 2};
-const o2 = {a: 1, b: 3};
+const o1 = { a: 1, b: 2 };
+const o2 = { a: 1, b: 2 };
+const o2 = { a: 1, b: 3 };
 
 isEquivalentObj(o1, o2); // true
 isEquivalentObj(o1, o3); // false

@@ -9,15 +9,15 @@ describe('the collection filter', () => {
           age: 30,
           children: [
             {
-              age: 12
+              age: 12,
             },
             {
-              age: 8
-            }
-          ]
-        }
-      ]
-    }
+              age: 8,
+            },
+          ],
+        },
+      ],
+    },
   ];
   it('object filter', () => {
     expect(filterTree(obj, 12, 'age')).toEqual([
@@ -28,12 +28,12 @@ describe('the collection filter', () => {
             age: 30,
             children: [
               {
-                age: 8
-              }
-            ]
-          }
-        ]
-      }
+                age: 8,
+              },
+            ],
+          },
+        ],
+      },
     ]);
   });
 });

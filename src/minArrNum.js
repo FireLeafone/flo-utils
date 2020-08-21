@@ -4,6 +4,7 @@
  * @returns
  */
 import isArray from './isArray';
+
 function minArrNum(arr) {
   if (!isArray(arr)) {
     console.warn('param type is array');

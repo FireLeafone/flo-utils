@@ -7,7 +7,7 @@
  */
 import isArray from './isArray';
 
-function arrayToTree(arr, id="id", pid="pid", children="children") {
+function arrayToTree(arr, id = 'id', pid = 'pid', children = 'children') {
   if (!isArray(arr)) {
     return new Error('data params is array type');
   }

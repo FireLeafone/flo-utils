@@ -9,15 +9,19 @@ import isArray from './isArray';
 
 export const DEFAULT_VALUE = [];
 
-function filterTreeFn (data, fn, childrenKey = 'children') {
+function filterTreeFn(data, fn, childrenKey = 'children') {
   if (!isArray(data)) {
     return DEFAULT_VALUE;
   }
   if (!data.length) return DEFAULT_VALUE;
-  var newData = data.filter(fn);
-  newData.forEach(x => x[childrenKey] && (x[childrenKey] = filterTreeFn(x[childrenKey], fn)));
+  let newData = data.filter(fn);
+  newData = newData.map((item) => {
+    const x = { ...item };
+    x[childrenKey] && (x[childrenKey] = filterTreeFn(x[childrenKey], fn));
+    return x;
+  });
 
-  var filterData = newData.filter(fn);
+  const filterData = newData.filter(fn);
 
   return filterData;
 }

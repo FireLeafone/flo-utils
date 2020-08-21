@@ -7,10 +7,10 @@
 
 import isObject from './isObject';
 
-function unBindAntdForm (formData = {}) {
+function unBindAntdForm(formData = {}) {
   if (!isObject(formData)) {
-    new Error ('param is object type');
-    return;
+    console.warn('param is object type');
+    return null;
   }
   const keys = Object.keys(formData);
   const obj = {};

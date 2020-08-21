@@ -4,10 +4,7 @@
 
 ---
 
-[![flo-utils][flo-utils-img]][flo-utils-url]
-[![flo-utils version][npm-img]][npm-url]
-[![npm download][download-img]][download-url]
-[![build status][travis-img]][travis-url]
+[![flo-utils][flo-utils-img]][flo-utils-url] [![flo-utils version][npm-img]][npm-url] [![npm download][download-img]][download-url] [![build status][travis-img]][travis-url]
 
 [flo-utils-url]: https://github.com/FireLeafone/FL-utils
 [flo-utils-img]: https://img.shields.io/badge/flo--utils-coding-green.svg
@@ -50,3 +47,4 @@ import isNull from 'flo-utils/lib/isNull'
 - [Collection](./docs/collection.md)
 - [Dom](./docs/dom.md)
 - [Format](./docs/format.md)
+- [util](./docs/util.md)

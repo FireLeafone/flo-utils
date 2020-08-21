@@ -4,6 +4,6 @@
 
 import _ from 'lodash';
 
-var isNumber = _.isNumber;
+const isNumber = _.isNumber;
 
 export default isNumber;

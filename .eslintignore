@@ -1,5 +1,10 @@
-node_modules/
-lib/
-dist/
-static/
-tests/
+/node_modules
+/lib
+/dist
+/public
+/config
+/script
+/docs
+/src/.umi
+/tests
+/coverage

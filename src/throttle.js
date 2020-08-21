@@ -10,7 +10,7 @@
  * @Copyright <<projectCreationYear>> - 2018 bairong, bairong
  * @fighting: code is far away from bug with the animal protecting
  *  ┏┓      ┏┓
- *  ┏┛┻━━━┛┻┓ 
+ *  ┏┛┻━━━┛┻┓
  *  |           |
  *  |     ━    |
  *  |  ┳┛ ┗┳ |
@@ -28,14 +28,13 @@
  *      ┗┻┛   ┗┻┛
  */
 
-
 /**
  * @name throttle, 节流函数，（高频操作，性能优化）
  * @param {*} func
  * @param {number} [wait = 300]
  * @returns
  * @example
- * 
+ *
  const throttleAjax = throttle((newParams)=>{
   return new Promise((resolve, reject) => {
     xhr({
@@ -69,11 +68,10 @@ export function apiExample (params) {
 }
  */
 
-function throttle (func, wait = 300) {
-  var timeout;
-  return function () {
-    var context = this;
-    var args = arguments;
+function throttle(func, wait = 300) {
+  let timeout;
+  return (...args) => {
+    const context = this;
     return new Promise((resolve) => {
       if (!timeout) {
         timeout = setTimeout(() => {

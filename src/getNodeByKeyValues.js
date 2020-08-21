@@ -16,15 +16,20 @@ import isArray from './isArray';
 
 export const DEFAULT_VALUE = [];
 
-function getNodeByKeyValues (collection = [], values = [], key = 'key', childrenKey = "children") {
+function getNodeByKeyValues(
+  collection = [],
+  values = [],
+  key = 'key',
+  childrenKey = 'children',
+) {
   if (!isArray(collection) || !isArray(values)) {
-    new Error('first param and srcond param type is array');
+    console.warn('first param and srcond param type is array');
     return DEFAULT_VALUE;
   }
 
   const nodes = [];
   const findNodes = (collecs) => {
-    collecs.forEach(item => {
+    collecs.forEach((item) => {
       if (item[key] && values.indexOf(item[key]) >= 0) {
         nodes.push(item);
       }

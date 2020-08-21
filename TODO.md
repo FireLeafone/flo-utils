@@ -2,6 +2,8 @@
 
 > pm todolist
 
-方法收集ing...
+方法收集 ing...
 
-- [ ] 支持TS
+- [ ] 支持 TS
+- [ ] rollup
+- [ ] docs site

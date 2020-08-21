@@ -11,10 +11,11 @@ function filterTree(data, id, key = 'id') {
   if (!isArray(data)) {
     return new Error('data params is array type');
   }
-  const newData = data.filter((x) => x[key] !== id);
-  newData.forEach((item) => {
+  let newData = data.filter((x) => x[key] !== id);
+  newData = newData.map((item) => {
     const x = { ...item };
     x.children && (x.children = filterTree(x.children, id, key));
+    return x;
   });
   return newData;
 }

@@ -40,7 +40,7 @@ const objA = [
 
 describe('tree data sort', () => {
   it('empty param', () => {
-    expect(sortTree({}, (item) => item)).toBe(DEFAULT_VALUE);
+    expect(sortTree([], (item) => item)).toBe(DEFAULT_VALUE);
   });
   it('sort asc', () => {
     expect(sortTree(nums, 'asc')).toEqual([1, 2, 3, 5]);

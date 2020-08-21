@@ -17,7 +17,7 @@ function trim(sr, position = POSITION.both) {
   let str = sr;
   if (typeof str !== 'string') return str;
   if (!POSITION[position]) {
-    console.error('unexpected position value');
+    console.warn('unexpected position value');
     return str;
   }
 

@@ -14,10 +14,11 @@ function filterTreeFn(data, fn, childrenKey = 'children') {
     return DEFAULT_VALUE;
   }
   if (!data.length) return DEFAULT_VALUE;
-  const newData = data.filter(fn);
-  newData.forEach((item) => {
+  let newData = data.filter(fn);
+  newData = newData.map((item) => {
     const x = { ...item };
     x[childrenKey] && (x[childrenKey] = filterTreeFn(x[childrenKey], fn));
+    return x;
   });
 
   const filterData = newData.filter(fn);

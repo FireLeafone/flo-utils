@@ -15,10 +15,10 @@
 
 ```js
 useCompose(
-  console.log,
+  [console.log,
   partial(add, 10),
   partial(pow, 3),
-  partial(multiply, 5)
+  partial(multiply, 5)]
 )(2); // 1010
 ```
 

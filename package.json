@@ -1,6 +1,6 @@
 {
   "name": "flo-utils",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "some utils ",
   "main": "lib/index.js",
   "files": [

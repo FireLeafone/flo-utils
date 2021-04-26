@@ -1,19 +1,19 @@
-'use strict';
+
 
 /**
  * webpack build config
  */
 
-var webpack = require('webpack');
-var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
-var CONFIG = require('./config');
-var utils = require('./utils');
+const webpack = require('webpack');
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const CONFIG = require('./config');
+const utils = require('./utils');
 
 const babelConfig = require('../babelConfig.js')();
 
 console.log(babelConfig);
 
-var baseConfig = {
+const baseConfig = {
   mode: 'production',
   entry: utils.resolve('src/index'),
   output: {

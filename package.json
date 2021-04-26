@@ -1,6 +1,6 @@
 {
   "name": "flo-utils",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "some utils ",
   "main": "lib/index.js",
   "files": [
@@ -81,6 +81,10 @@
     "rimraf": "^3.0.2",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.20",
+    "moment": "^2.27.0"
   },
   "engines": {
     "node": ">= 6.0.0",

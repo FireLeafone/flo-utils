@@ -24,9 +24,14 @@ function isEquivalentObj(a, b) {
   for (let i = 0, len = aProps.length; i < len; i += 1) {
     const propName = aProps[i];
 
-    // 如果对应的值不同，那么对象内容也不同
-    if (a[propName] !== b[propName]) {
-      return false;
+    if (
+      typeof a[propName] !== 'function' ||
+      !typeof b[propName] !== 'function'
+    ) {
+      // 如果对应的值不同，那么对象内容也不同
+      if (a[propName] !== b[propName]) {
+        return false;
+      }
     }
   }
 

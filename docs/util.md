@@ -4,7 +4,7 @@
 
 ## useCompose
 
-> 函数式编程 `compose`
+> 函数式编程 `compose` 类似于 pipe管道
 
 数据操作集合成加工 A => B => C: `useCompose([C, B, A])(data)`
 
@@ -87,4 +87,16 @@ foo(2); // -8
 ```js
 const divideF = useDivide([{key: 'a', hook: (a) => a + 1}])
 divideF({a: 3}) // {a: 4}
+```
+
+## useBatch
+
+> 赋予单处理函数批量处理能力
+
+```js
+const setStyle = useBatch((el, key, value) => {
+    el.style[key] = value;
+  });
+
+  setStyle([...items], 'color', 'red'); // 拥有了批量处理能力
 ```

@@ -22,6 +22,26 @@ useCompose(
 )(2); // 1010
 ```
 
+## useComposeAsync
+
+> 函数式处理异步promise函数
+
+数据操作集合成加工 A => B => C: `useComposeAsync([C, B, A])(data)`
+
+- @name useComposeAsync
+- @param {array} [middlewares] 异步操作集
+- @param {array} [hooks] 操作额外钩子
+- @param {boolean} [isReverse] 是否翻转操作，默认true
+
+```js
+const mockA = (a) => new Promise((resolve) => resolve(a + 3));
+const mockB = (a) => new Promise((resolve) => resolve(a - 1));
+const mockC = (a) => new Promise((resolve) => resolve(a * 10));
+useComposeAsync(
+  [mockA, mockB, mockC]
+)(2).then(res => console.log(res)); // 1010
+```
+
 ## useCurry
 
 > 函数式编程 `curry`
@@ -99,4 +119,31 @@ const setStyle = useBatch((el, key, value) => {
   });
 
   setStyle([...items], 'color', 'red'); // 拥有了批量处理能力
+```
+
+## saveHook
+
+> 数据保存，属性处理
+
+```js
+/**
+ * 数据属性保留
+ *
+ * 1、属于includes
+ * 2、不属于 excludes
+ * 3、不在两者中的 + excludes 不为true = 其他属性保留
+ *
+ * @export
+ * @param {any[] | any} [ds=[]]
+ * @param {string[]} [includes=[]]
+ * @param {string[]} [excludes=[]]
+ * @returns
+ */
+const testObj = {
+  'a': 1,
+  'b': 2,
+  'c': 3,
+  'd': 4,
+};
+saveHook(testObj, [], ['b', 'd']); // {'a': 1, 'c': 3}
 ```

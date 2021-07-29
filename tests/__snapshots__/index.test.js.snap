@@ -45,6 +45,8 @@ Array [
   "randomColor",
   "trim",
   "useCompose",
+  "saveHook",
+  "useComposeAsync",
   "useCurry",
   "usePartialHook",
   "useDivide",

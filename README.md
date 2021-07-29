@@ -1,6 +1,6 @@
 # FLO-utils
 
-> 项目中常用的工具方法集库 🚀 ☕
+> 常用的工具方法集库 🚀 ☕
 
 ---
 
@@ -18,7 +18,7 @@
 - [更新日志](./CHANGELOG.md)
 - 常用库[lodashJS](https://www.lodashjs.com/)
 
-## Installing
+## Install
 
 Using npm:
 
@@ -36,7 +36,7 @@ import isNull from 'flo-utils/lib/isNull'
 <script src="flo-utils/dist/floUtils.js"></scritp>
 ```
 
-## 类别区分
+## Doc
 
 - [Ajax](./docs/ajax.md)
 - [Array](./docs/array.md)

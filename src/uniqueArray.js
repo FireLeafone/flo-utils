@@ -3,14 +3,16 @@
  * @description 去重
  */
 
-import _ from 'lodash';
+import isObject from 'lodash/isObject';
+import uniqBy from 'lodash/uniqBy';
+import uniq from 'lodash/uniq';
 
 function uniqueArray(arr, key) {
   if (arr.length) {
-    if (_.isObject(arr[0])) {
-      return key ? _.uniqBy(arr, key) : arr;
+    if (isObject(arr[0])) {
+      return key ? uniqBy(arr, key) : arr;
     }
-    return _.uniq(arr);
+    return uniq(arr);
   }
   return [];
 }

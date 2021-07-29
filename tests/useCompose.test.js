@@ -6,6 +6,7 @@ describe('useCompose test', () => {
     const mockB = jest.fn((a) => a - 1);
     const mockC = jest.fn((a) => a * 10);
 
+    // 左 -> 右
     const foo = useCompose([mockA, mockB, mockC]);
 
     expect(foo(2)).toEqual(22);
@@ -19,6 +20,7 @@ describe('useCompose test', () => {
     const mockB = jest.fn((a) => a - 1);
     const mockC = jest.fn((a) => a * 10);
 
+    // 顺序执行 左 -> 右
     const foo = useCompose([mockA, mockB, mockC], [], false);
 
     expect(foo(2)).toEqual(40);
@@ -55,7 +57,7 @@ describe('useCompose test', () => {
     const mockA = jest.fn((a, b) => a + b);
     const mockB = jest.fn((a, b) => a - b);
     const mockC = jest.fn((a, b) => a * b);
-    const hoc = jest.fn((fn, b) => (a) => fn(a, b))
+    const hoc = jest.fn((fn, b) => (a) => fn(a, b));
 
     const foo = useCompose([
       hoc(mockA, 3),
@@ -68,6 +70,6 @@ describe('useCompose test', () => {
     expect(mockA.mock.calls.length).toBe(1);
     expect(mockB.mock.calls.length).toBe(1);
     expect(mockC.mock.calls.length).toBe(1);
-  })
+  });
 
 });

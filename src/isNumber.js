@@ -2,8 +2,6 @@
  * @link https://github.com/lodash/lodash/blob/es/isNumber.js
  */
 
-import _ from 'lodash';
-
-const isNumber = _.isNumber;
+import isNumber from 'lodash/isNumber';
 
 export default isNumber;

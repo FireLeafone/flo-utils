@@ -110,6 +110,8 @@ export { default as trim } from './trim';
  * util
  */
 export { default as useCompose } from './useCompose';
+export { default as saveHook } from './saveHook';
+export { default as useComposeAsync } from './useComposeAsync';
 export { default as useCurry } from './useCurry';
 export { default as usePartialHook } from './usePartialHook';
 export { default as useDivide } from './useDivide';

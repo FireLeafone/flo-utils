@@ -12,12 +12,13 @@
  * => 'sd'
  */
 
-import _ from 'lodash';
+import toNumber from 'lodash/toNumber';
+import isNumber from 'lodash/isNumber';
 import beNaN from './beNaN';
 
 function numPoints(num, precision) {
-  const toNum = _.toNumber(num);
-  if (precision && !_.isNumber(precision)) {
+  const toNum = toNumber(num);
+  if (precision && !isNumber(precision)) {
     console.warn('srcond param type is number');
     return num || '';
   }

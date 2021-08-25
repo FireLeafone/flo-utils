@@ -3,6 +3,8 @@
   "version": "0.7.0",
   "description": "some utils ",
   "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/floUtils.js",
   "files": [
     "lib",
     "es",

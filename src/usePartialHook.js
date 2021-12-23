@@ -5,7 +5,10 @@
  */
 
 /**
- *
+const mockA = (a, b) => a - b;
+const foo = usePartialHook(mockA, [10], true);
+
+foo(2); // -8
  * @param {*} fn
  * @param {*} [presetArgs=[]] // 预设参数
  * @param {boolean} [isReverse=false]

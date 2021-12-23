@@ -6,10 +6,11 @@
  */
 
 import isObject from './isObject';
+import { consoleWran } from './warn/util';
 
 function isEquivalentObj(a, b) {
   if (!isObject(a) || !isObject(b)) {
-    console.warn('type is object');
+    consoleWran('type is object');
     return false;
   }
   // 获取对象属性的所有的键

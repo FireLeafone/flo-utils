@@ -6,12 +6,13 @@
  */
 
 import isObject from './isObject';
+import { consoleWran } from './warn/util';
 
 export const DEFAULT_VALUE = {};
 
 function antdFormFormat(record = {}) {
   if (!isObject(record)) {
-    console.warn('param is object type');
+    consoleWran('param is object type');
     return DEFAULT_VALUE;
   }
   const keys = Object.keys(record);

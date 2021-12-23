@@ -4,10 +4,11 @@
  * @returns
  */
 import isArray from './isArray';
+import { consoleWran } from './warn/util';
 
 function minArrNum(arr) {
   if (!isArray(arr)) {
-    console.warn('param type is array');
+    consoleWran('param type is array');
     return NaN;
   }
   return arr.reduce((a, b) => {

@@ -10,11 +10,12 @@
 
 import isArray from './isArray';
 import isObject from './isObject';
+import { consoleWran } from './warn/util';
 
 function filter(collection, func) {
   let result = null;
   if (typeof func !== 'function') {
-    console.warn('second param is object or array !');
+    consoleWran('second param is object or array !');
     return [];
   }
   if (isArray(collection)) {
@@ -32,7 +33,7 @@ function filter(collection, func) {
       result[key] = keyVal;
     }
   } else {
-    console.warn('1st param is object or array !');
+    consoleWran('1st param is object or array !');
     return [];
   }
 

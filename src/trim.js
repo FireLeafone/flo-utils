@@ -1,3 +1,5 @@
+import { consoleWran } from './warn/util';
+
 const POSITION = Object.freeze({
   left: 'left',
   right: 'right',
@@ -17,7 +19,7 @@ function trim(sr, position = POSITION.both) {
   let str = sr;
   if (typeof str !== 'string') return str;
   if (!POSITION[position]) {
-    console.warn('unexpected position value');
+    consoleWran('unexpected position value');
     return str;
   }
 

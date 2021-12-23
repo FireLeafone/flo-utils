@@ -15,11 +15,12 @@
 import toNumber from 'lodash/toNumber';
 import isNumber from 'lodash/isNumber';
 import beNaN from './beNaN';
+import { consoleWran } from './warn/util';
 
 function numPoints(num, precision) {
   const toNum = toNumber(num);
   if (precision && !isNumber(precision)) {
-    console.warn('srcond param type is number');
+    consoleWran('srcond param type is number');
     return num || '';
   }
   if (beNaN(toNum)) return num || '';

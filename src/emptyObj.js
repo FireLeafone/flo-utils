@@ -4,10 +4,11 @@
  * @returns
  */
 import isObject from './isObject';
+import { consoleWran } from './warn/util';
 
 function emptyObj(obj) {
   if (!isObject(obj)) {
-    console.warn('type is object');
+    consoleWran('type is object');
     return false;
   }
   for (const prop in obj) {

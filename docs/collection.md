@@ -338,5 +338,70 @@ const tree = [
     ],
   },
 ];
-getValueByPath('0.children.1.children.0.name'); // child2-child
+getValueByPath(tree, '0.children.1.children.0.name'); // child2-child
+```
+
+## setValueByPath
+
+> 通过路径设置值
+
+- @param {any} obj
+- @param {any} paths a.b.c.d
+- @param {string} [value=""]
+
+```js
+const tree = [
+  {
+    id: '0',
+    name: 'parent',
+    children: [
+      {
+        id: '01',
+        pid: '0',
+        name: 'child1',
+      },
+      {
+        id: '02',
+        pid: '0',
+        name: 'child2',
+        children: [
+          {
+            id: '021',
+            pid: '02',
+            name: 'child2-child',
+          },
+        ],
+      },
+    ],
+  },
+];
+setValueByPath(tree, '0.children.1.children.0.name', 'example');
+
+/*
+[
+  {
+    id: '0',
+    name: 'parent',
+    children: [
+      {
+        id: '01',
+        pid: '0',
+        name: 'child1',
+      },
+      {
+        id: '02',
+        pid: '0',
+        name: 'child2',
+        children: [
+          {
+            id: '021',
+            pid: '02',
+            name: 'example',
+          },
+        ],
+      },
+    ],
+  },
+];
+*/
 ```

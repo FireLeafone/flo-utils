@@ -6,10 +6,11 @@
  */
 
 import isObject from './isObject';
+import { consoleWran } from './warn/util';
 
 function unBindAntdForm(formData = {}) {
   if (!isObject(formData)) {
-    console.warn('param is object type');
+    consoleWran('param is object type');
     return null;
   }
   const keys = Object.keys(formData);

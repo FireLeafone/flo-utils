@@ -13,6 +13,7 @@
  */
 
 import isArray from './isArray';
+import { consoleWran } from './warn/util';
 
 export const DEFAULT_VALUE = [];
 
@@ -23,7 +24,7 @@ function getNodeByKeyValues(
   childrenKey = 'children',
 ) {
   if (!isArray(collection) || !isArray(values)) {
-    console.warn('first param and srcond param type is array');
+    consoleWran('first param and srcond param type is array');
     return DEFAULT_VALUE;
   }
 

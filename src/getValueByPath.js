@@ -1,34 +1,31 @@
 /**
  * @name getValueByPath
- * @param {any} obj
- * @param {any} props  a.b.c.d
+ * @param {any} entity
+ * @param {any} path  a.b.c.d
  * @param {string} [defaultValue=""]
  * @returns
  * @description 通过路径获取数据
  */
-function getValueByPath(obj, ps, defaultValue = '-') {
-  let props = ps;
+function getValueByPath(entity, path, defaultValue = '-') {
+  let props = path;
   if (typeof props === 'string') {
     props = props.split('.').filter((d) => d);
   }
 
-  if (
-    typeof obj === 'undefined' ||
-    (!obj && typeof obj !== 'undefined' && obj !== 0)
-  ) {
+  let current = entity;
+
+  for (let i = 0; i < props.length; i += 1) {
+    if (current === null || current === undefined) {
+      return defaultValue;
+    }
+
+    current = current[props[i]];
+  }
+
+  if (current === null || current === undefined) {
     return defaultValue;
   }
-  if (!props || props.length === 0) {
-    return obj;
-  }
-
-  const prop = props.shift();
-
-  if (prop && Object.prototype.hasOwnProperty.call(obj, prop)) {
-    return getValueByPath(obj[prop], props, defaultValue);
-  }
-
-  return defaultValue;
+  return current;
 }
 
 export default getValueByPath;

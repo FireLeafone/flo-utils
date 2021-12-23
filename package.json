@@ -1,8 +1,10 @@
 {
   "name": "flo-utils",
-  "version": "0.7.0",
+  "version": "0.8.1",
   "description": "some utils ",
   "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/floUtils.js",
   "files": [
     "lib",
     "es",
@@ -48,8 +50,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "moment": "^2.27.0",
-    "pre-commit": "^1.2.2"
+    "moment": "^2.27.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -77,6 +78,7 @@
     "lint-staged": "^10.2.11",
     "lodash-webpack-plugin": "^0.11.5",
     "ora": "^5.0.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "webpack": "^4.44.1",

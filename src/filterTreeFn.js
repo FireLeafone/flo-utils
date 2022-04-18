@@ -17,7 +17,8 @@ function filterTreeFn(data, fn, childrenKey = 'children') {
   let newData = data.filter(fn);
   newData = newData.map((item) => {
     const x = { ...item };
-    x[childrenKey] && (x[childrenKey] = filterTreeFn(x[childrenKey], fn));
+    x[childrenKey] &&
+      (x[childrenKey] = filterTreeFn(x[childrenKey], fn, childrenKey));
     return x;
   });
 

@@ -2,6 +2,12 @@
 
 > pm log 🚀⏲
 
+## 0.8.3
+
+`2022-05-05`
+
+- 🚀 `getNodeByKeyValues` @param {string|function} [key='key'] 支持 Fn(item, valus): boolean 自定义比较
+
 ## 0.8.2
 
 `2022-04-16`

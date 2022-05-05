@@ -2,7 +2,7 @@
  * @name getNodeByKeyValues, 获取节点
  * @param {*} [collection=[]]
  * @param {*} [values=[]]
- * @param {string} [key='key']
+ * @param {string|function} [key='key'] 支持 Fn(item, valus): boolean 自定义比较
  * @param {string} [key='children'] 非必须
  * @description 根据`key` 匹配 `values`中的值，获取对应`node`
  * @example
@@ -20,7 +20,7 @@ export const DEFAULT_VALUE = [];
 function getNodeByKeyValues(
   collection = [],
   values = [],
-  key = 'key',
+  keyF = 'key', // fn
   childrenKey = 'children',
 ) {
   if (!isArray(collection) || !isArray(values)) {
@@ -31,7 +31,9 @@ function getNodeByKeyValues(
   const nodes = [];
   const findNodes = (collecs) => {
     collecs.forEach((item) => {
-      if (item[key] && values.indexOf(item[key]) >= 0) {
+      if (typeof keyF === 'function' && keyF(item, values)) {
+        nodes.push(item);
+      } else if (item[keyF] && values.includes(item[keyF])) {
         nodes.push(item);
       }
       if (item[childrenKey] && item[childrenKey].length) {

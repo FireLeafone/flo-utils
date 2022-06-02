@@ -47,4 +47,4 @@ import isNull from 'flo-utils/lib/isNull'
 - [Collection](./docs/collection.md)
 - [Dom](./docs/dom.md)
 - [Format](./docs/format.md)
-- [util](./docs/util.md)
+- [useFun](./docs/useFun.md)

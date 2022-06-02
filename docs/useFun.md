@@ -76,7 +76,7 @@ curried(1)(_, 3)(2);
 
 ## usePartialHooks
 
-> 函数参数处理钩子
+> 函数参数处理钩子 (偏函数)
 
 - @name usePartialHooks
 - @param {function} [fn] 操作集

@@ -6,7 +6,7 @@ describe('useCompose test', () => {
     const mockB = jest.fn((a) => a - 1);
     const mockC = jest.fn((a) => a * 10);
 
-    // 左 -> 右
+    // 右 -> 左
     const foo = useCompose([mockA, mockB, mockC]);
 
     expect(foo(2)).toEqual(22);
